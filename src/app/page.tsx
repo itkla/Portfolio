@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "@/app/components/Footer";
 import { MacWindow } from "@/app/components/MacWindow";
 import { WorksWindow } from "@/app/components/WorksWindow";
@@ -36,6 +36,16 @@ interface WindowData {
 }
 
 export default function Home() {
+    const [windowSize, setWindowSize] = useState({ innerWidth: 0, innerHeight: 0 });
+        useEffect(() => {
+            const size = {
+                innerWidth: window.innerWidth,
+                innerHeight: window.innerHeight,
+            };
+            setWindowSize(size);
+            console.log(size);
+            openWindow("profile");
+        }, []);
     const [windows, setWindows] = useState<WindowData[]>([
         {
             id: "profile",
@@ -44,8 +54,8 @@ export default function Home() {
             zIndex: 1, // start with 1
             defaultHeight: 400,
             defaultWidth: 800,
-            defaultX: window.innerWidth / 2 - 800 / 2,
-            defaultY: window.innerHeight / 2 - 400 / 2,
+            defaultX: windowSize.innerWidth ? windowSize.innerWidth / 2 - 800 / 2 : undefined,
+            defaultY: windowSize.innerHeight ? windowSize.innerHeight / 2 - 400 / 2 : undefined,
         },
         {
             id: "about",
@@ -275,7 +285,7 @@ export default function Home() {
 
                     <div className="mt-4">
                         <h2 className="text-lg font-bold">About</h2>
-                        <p className="mt-2">Born and raised in Hawai'i, I moved to Japan to pursue further education and expand my horizons. Among other things, I sought to expand my portfolio, learn new skills, and sample a different culture and language.</p>
+                        <p className="mt-2">Born and raised in Hawai&apos;i, I moved to Japan to pursue further education and expand my horizons. Among other things, I sought to expand my portfolio, learn new skills, and sample a different culture and language.</p>
                         <p className="mt-2">I ended up loving it.</p>
                         <h2 className="text-lg font-bold mt-4">What I do</h2>
                         <p className="mt-2">I'm a backend/systems engineer and full-stack developer with a penchant for clean, efficient, and modern code. I'm also a fan of minimalism, whitespace, and simple design principles.</p>

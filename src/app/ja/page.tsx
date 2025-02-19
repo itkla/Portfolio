@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "@/app/components/Footer";
 import { MacWindow } from "@/app/components/MacWindow";
 import { WorksWindow } from "@/app/components/WorksWindow";
@@ -18,6 +18,7 @@ import { TiltedWrapper } from "@/app/components/TiltedWrapper";
 import { HawaiiLicenseCard } from "@/app/components/HawaiiLicenseCard";
 import GradientText from "@/app/components/GradientText/GradientText";
 import ClickSpark from "@/app/components/ClickSpark/ClickSpark";
+import WindowSize from "@/app/components/WindowSize";
 
 import { Scroll } from "lucide-react";
 import { set } from "react-hook-form";
@@ -36,6 +37,16 @@ interface WindowData {
 }
 
 export default function Home() {
+    const [windowSize, setWindowSize] = useState({ innerWidth: 0, innerHeight: 0 });
+        useEffect(() => {
+            const size = {
+                innerWidth: window.innerWidth,
+                innerHeight: window.innerHeight,
+            };
+            setWindowSize(size);
+            console.log(size);
+            openWindow("profile");
+        }, []);
     const [windows, setWindows] = useState<WindowData[]>([
         {
             id: "profile",
@@ -44,8 +55,8 @@ export default function Home() {
             zIndex: 1, // start with 1
             defaultHeight: 400,
             defaultWidth: 800,
-            defaultX: window.innerWidth / 2 - 800 / 2,
-            defaultY: window.innerHeight / 2 - 400 / 2,
+            defaultX: windowSize.innerWidth ? windowSize.innerWidth / 2 - 800 / 2 : undefined,
+            defaultY: windowSize.innerHeight ? windowSize.innerHeight / 2 - 400 / 2 : undefined,
         },
         {
             id: "about",
