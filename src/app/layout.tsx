@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
-import Footer from "@/app/components/Footer";
+import { JetBrains_Mono } from "next/font/google";
 import React from "react";
 import "./globals.css";
-
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
 
 const jetBrainsMono = JetBrains_Mono({
     variable: "--font-jetbrains-mono",
@@ -24,13 +13,17 @@ export const metadata: Metadata = {
     description: "Hello, how are you?",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
+    params,
 }: Readonly<{
     children: React.ReactNode;
+    params: Promise<{ locale: string }>;
 }>) {
+    const { locale } = await params;
+
     return (
-        <html lang="en">
+        <html lang={locale}>
             <body className={`${jetBrainsMono.variable} ${jetBrainsMono.variable} antialiased`}>
                 {children}
             </body>

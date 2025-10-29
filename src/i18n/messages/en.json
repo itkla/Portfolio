@@ -1,0 +1,152 @@
+{
+    "windows": {
+        "profile": "Profile",
+        "about": "About",
+        "terminal": "Terminal",
+        "works": "Works",
+        "encryptedFile": "super_secret_file.txt",
+        "steam": "steampowered.com",
+        "textEditor": "TextEditor",
+        "pixelGarden": "Pixel Garden"
+    },
+    "desktop": {
+        "works": "Works",
+        "secret": "???"
+    },
+    "about": {
+        "title": "About",
+        "bio": "Born and raised in Hawai'i, I moved to Japan to pursue further education and expand my horizons. I came here to grow my portfolio, develop new technical skills, and immerse myself in a different culture and language.",
+        "journey": "It's been an incredible journey.",
+        "whatIDoTitle": "What I do",
+        "whatIDo1": "I'm a backend/systems engineer and full-stack developer with a focus on clean, efficient (most of the time), and maintainable code. I specialize in building scalable systems with an emphasis on minimalist design and thoughtful architecture.",
+        "whatIDo2": "Currently, I'm working on several projects including a modern authentication platform, this portfolio site, and confidential client work.",
+        "whatIDo3": "Whether it's backend infrastructure or frontend interfaces, I build complete solutions from the ground up.",
+        "skillsTitle": "Skills",
+        "educationTitle": "Education",
+        "featuredWorkTitle": "Featured Work",
+        "getInTouch": "Get in touch",
+        "education": {
+            "comptia": "CompTIA A+ Certification",
+            "uoh": "University of Hawai'i",
+            "isi": "ISI Language School",
+            "cgarts": "CG-Arts Web Designer Basic Certificate",
+            "google": "Google Project Management Certificate",
+            "hal": "HAL東京"
+        }
+    },
+    "terminal": {
+        "profileOutput": "Hunter Nakagawa\nBackend/systems engineer and full-stack developer.",
+        "aboutOutput": "Born and raised in Hawai'i, I moved to Japan to pursue further education and expand my horizons. I came here to grow my portfolio, develop new technical skills, and immerse myself in a different culture and language.",
+        "projectsOutput": "Projects: Checkpoint, HAL Boulangerie, Concierge, Takadanobaba Fighters, Portfolio",
+        "help": "Available commands:\n  File System: ls, pwd, cd, mkdir, touch, rm, cat\n  System Info: whoami, hostname, uname, uptime, date, time, env\n  Utilities: echo, clear, help, man, ping, crypto, reset\n\nType 'man [command]' for detailed information.\nNote: Your filesystem changes are saved automatically.",
+        "ping": "Pong!",
+        "whoami": "Guest",
+        "ls": "profile.txt about.txt projects.txt",
+        "fileNotFound": "File not found.",
+        "unknownCommand": "Unknown command. Type 'help' for a list of commands.",
+        "welcomeAdmin": "Welcome, admin.",
+        "incorrectPassword": "Incorrect password."
+    },
+    "projects": {
+        "checkpoint": {
+            "title": "Checkpoint",
+            "status": "Active",
+            "short": "A modern authentication and identity management system designed to address critical security gaps in existing authentication standards.",
+            "description": "Checkpoint was built to solve a real problem: many authentication systems in Japan fail to adequately protect user data, exposing private information unnecessarily. My solution provides organizations with a secure, purpose-built platform that properly hashes, encrypts, and stores sensitive client information.",
+            "solution": "By centralizing authentication through Checkpoint, organizations can focus on their core business while ensuring their users' data remains secure."
+        },
+        "boulangerie": {
+            "title": "HAL Boulangerie",
+            "short": "A clean, modern website built as a school assignment using only HTML, JavaScript, and Tailwind CSS due to project constraints.",
+            "description": "This project demonstrates my design philosophy: bold colors, generous whitespace, and minimal aesthetics working in harmony to create an elegant user experience."
+        },
+        "concierge": {
+            "title": "Concierge",
+            "status": "Confidential",
+            "short": "An inventory management and device orchestration platform developed for the Hawaii State Department of Education to modernize their mobile device deployment infrastructure.",
+            "description": "The legacy toolset was significantly outdated and inefficient. This platform reduced deployment time from weeks or months to just days when provisioning 1,000+ mobile devices.",
+            "confidential": "As this project was developed under contract for a government agency, the codebase and infrastructure details remain confidential."
+        },
+        "takadanobaba": {
+            "title": "Takadanobaba Fighters",
+            "short": "A browser-based game developed as a group project at HAL, designed to showcase the vibrant Takadanobaba neighborhood in Shinjuku.",
+            "description": "Built using Pixi.js as its rendering engine, the game runs entirely in browser-based JavaScript. Game assets are dynamically loaded and rendered on an HTML5 canvas through Pixi.js, while the HUD and interactive elements are implemented in HTML and JavaScript.",
+            "timeline": "The project was developed in 3 weeks, followed by 2 weeks of refinement and polish."
+        },
+        "portfolio": {
+            "title": "Portfolio",
+            "short": "My personal portfolio website, built with Next.js and featuring interactive components powered by GSAP, Three.js, and Framer Motion.",
+            "description": "While I initially postponed creating a portfolio site in favor of other priorities, turning it into a school project proved to be the perfect motivation. The result exceeded my expectations.",
+            "design": "The design takes inspiration from the macOS desktop environment, featuring draggable windows with the signature traffic light buttons, a functional dock, and familiar interface patterns that create an immersive, desktop-like experience.",
+            "secrets": "Several easter eggs are hidden throughout the site. Can you discover them all?"
+        },
+        "receptionist": {
+            "title": "Receptionist",
+            "short": "An internal platform for managing hardware shipments and device inventory across multiple facilities.",
+            "description": "Receptionist streamlines the entire lifecycle of device management—from initial shipment tracking to device provisioning, user assignments, and decommissioning. Built for organizations that need to maintain visibility and control over distributed hardware assets.",
+            "features": "The platform includes automated email notifications via Resend, API key management for programmatic access, and a comprehensive audit trail for all device movements and status changes."
+        },
+        "bob": {
+            "title": "Bob",
+            "status": "Active",
+            "short": "A versatile blob object manager written in Rust that functions as both a standalone client and an authenticated server for managing blob objects.",
+            "description": "Bob enables efficient creation and management of blob objects from files and folders, with support for both local operations and remote uploads to authenticated servers. The system is built with flexibility in mind, allowing seamless integration with existing workflows.",
+            "features": "Bob now supports multiple storage backends including local filesystem, AWS S3, Google Cloud Storage, Azure Blob Storage, and Backblaze B2, providing organizations with the freedom to choose their preferred infrastructure."
+        },
+        "jot": {
+            "title": "Jot",
+            "status": "Active",
+            "short": "A minimal, cross-platform notepad application built with Tauri and Rust, inspired by Windows Notepad.",
+            "description": "Jot strips away unnecessary features to deliver what a text editor should be: fast, lightweight, and distraction-free. Built with Tauri v2 and Rust for native performance, it handles file operations instantly while maintaining an ultra-minimal interface.",
+            "philosophy": "Sometimes the best tools are the simplest ones. No formatting, no plugins, no bloat—just you and your text."
+        },
+        "aer": {
+            "title": "Aer",
+            "status": "Private",
+            "short": "Cross-device, cross-ecosystem P2P file sharing that works like magic—no cables, no cloud, no friction.",
+            "description": "Aer enables direct peer-to-peer file transfers between any devices on the same local network, regardless of operating system or manufacturer. Built with WebRTC for real-time connectivity and wrapped in a native Tauri application, it provides AirDrop-like functionality for everyone.",
+            "technical": "The architecture leverages WebRTC data channels for secure, direct device-to-device communication. Discovery happens automatically on the local network, and transfers utilize the fastest available connection path without routing through external servers."
+        }
+    },
+    "links": {
+        "repository": "Repository",
+        "website": "Website"
+    },
+    "encryptedFile": {
+        "title": "???",
+        "content": "This is a secret file."
+    },
+    "textEditor": {
+        "new": "New",
+        "open": "Open",
+        "save": "Save",
+        "saveAs": "Save As",
+        "saveAsPrompt": "Enter filename:",
+        "unsavedChanges": "You have unsaved changes. Continue?",
+        "placeholder": "Start typing or open a file...",
+        "lines": "lines",
+        "characters": "chars"
+    },
+    "pixelGarden": {
+        "infoTitle": "Welcome to Pixel Garden",
+        "infoDescription": "Draw a 16×16 pixel art flower to plant in the garden. Use the brush tool to paint and the eraser to remove pixels.",
+        "createYourFlower": "Create your flower",
+        "submit": "Plant Flower",
+        "submitting": "Planting...",
+        "submitSuccess": "Flower planted!",
+        "submitSuccessDescription": "Your flower has been added to the garden.",
+        "submitError": "Failed to plant flower",
+        "submitErrorDescription": "There was a problem saving your flower. Please try again.",
+        "editor": "Editor",
+        "gallery": "Gallery",
+        "loading": "Loading flowers...",
+        "emptyGallery": "No flowers yet",
+        "emptyGalleryDescription": "Create your first flower using the editor tab.",
+        "fetchError": "Failed to load flowers",
+        "fetchErrorDescription": "Could not retrieve your saved flowers. Please try again.",
+        "deleteSuccess": "Flower removed",
+        "deleteSuccessDescription": "The flower has been removed from the garden.",
+        "deleteError": "Failed to remove flower",
+        "deleteErrorDescription": "Could not delete the flower. Please try again."
+    }
+}

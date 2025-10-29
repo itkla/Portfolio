@@ -1,0 +1,152 @@
+{
+    "windows": {
+        "profile": "Profile",
+        "about": "About",
+        "terminal": "Terminal",
+        "works": "Works",
+        "encryptedFile": "super_secret_file.txt",
+        "steam": "steampowered.com",
+        "textEditor": "テキストエディタ",
+        "pixelGarden": "ピクセルガーデン"
+    },
+    "desktop": {
+        "works": "作品",
+        "secret": "???"
+    },
+    "about": {
+        "title": "自己紹介",
+        "bio": "ハワイで生まれ育ち、さらなる学びと視野の拡大を求めて日本へ移住しました。また、ポートフォリオを充実させ、新たなスキルを習得し、異なる文化と言語に触れることにも注力しました。",
+        "journey": "その結果、これらの経験に魅了され、心から愛するようになりました。",
+        "whatIDoTitle": "やること",
+        "whatIDo1": "私はクリーンで効率的、そして現代的なコードを追求するバックエンド／システムエンジニア兼フルスタック開発者です。ミニマリズム、余白の活用、シンプルなデザインにもこだわりを持っています。",
+        "whatIDo2": "現在、最新の認証システム、個人向けウェブサイト、その他公開前のプロジェクトに取り組んでいます。",
+        "whatIDo3": "フロントエンドからバックエンドまで一貫してプロジェクトを完成できる人材をお探しの方は、ぜひご連絡ください。",
+        "skillsTitle": "スキル",
+        "educationTitle": "学歴・検定",
+        "featuredWorkTitle": "注目の作品",
+        "getInTouch": "お問い合わせ",
+        "education": {
+            "comptia": "CompTIA A+ Certification",
+            "uoh": "University of Hawai'i",
+            "isi": "ISIランゲージスクール",
+            "cgarts": "CG-Arts Webデザイナー ベーシック検定",
+            "google": "Google Project Management Certificate",
+            "hal": "HAL東京"
+        }
+    },
+    "terminal": {
+        "profileOutput": "Hunter Nakagawa\nBackend/systems engineer and full-stack developer.",
+        "aboutOutput": "Born and raised in Hawai'i, I moved to Japan to pursue further education and expand my horizons. Among other things, I sought to expand my portfolio, learn new skills, and sample a different culture and language.",
+        "projectsOutput": "Projects: Checkpoint, HAL Boulangerie, Concierge, 高田馬場ファイターズ, Portfolio",
+        "help": "利用可能なコマンド:\n  ファイルシステム: ls, pwd, cd, mkdir, touch, rm, cat\n  システム情報: whoami, hostname, uname, uptime, date, time, env\n  ユーティリティ: echo, clear, help, man, ping, crypto, reset\n\n詳細は 'man [コマンド]' で確認できます。\n注意: ファイルシステムの変更は自動的に保存されます。",
+        "ping": "Pong!",
+        "whoami": "Guest",
+        "ls": "profile.txt about.txt projects.txt",
+        "fileNotFound": "File not found.",
+        "unknownCommand": "Unknown command. Type 'help' for a list of commands.",
+        "welcomeAdmin": "Welcome, admin.",
+        "incorrectPassword": "Incorrect password."
+    },
+    "projects": {
+        "checkpoint": {
+            "title": "Checkpoint",
+            "status": "作成中",
+            "short": "現代向けに特化した認証およびアイデンティティ管理システムです。",
+            "description": "日本の認証基準は不十分で、それにより個人情報が漏洩するリスクがあると考え、私はCheckpointの開発に取り組みました。そこで、企業や団体が認証や管理を専用プラットフォームに委ね、クライアント情報をハッシュ化、暗号化、安全に保管することを促すのが私の解決策です。",
+            "solution": "こうして、Checkpointが誕生しました。"
+        },
+        "boulangerie": {
+            "title": "HAL Boulangerie",
+            "short": "課題として制作されたウェブページです。制約があったため、基本的なHTML、JS、Tailwindのみでデザインと制作を行いました。",
+            "description": "このサイトは、シンプルでモダンなデザイン理念に対する私のこだわりを示しています。大胆な色彩、余白、そしてミニマルな美学が際立つ作品です。"
+        },
+        "concierge": {
+            "title": "Concierge",
+            "status": "Confidential",
+            "short": "ハワイ州教育局で勤務していた際に開発した、在庫管理およびデバイス制御プラットフォームです。",
+            "description": "既存のツールが旧式であったため、大幅なアップグレードが切実に求められていました。通常、1,000台以上のモバイルデバイス展開に数週間から数ヶ月を要するところが、たった数日で実現しました。",
+            "confidential": "本プロジェクトは契約に基づいて進行したため、コードベースや連携するインフラの詳細は公開できません。"
+        },
+        "takadanobaba": {
+            "title": "高田馬場ファイターズ",
+            "short": "HAL東京でのグループプロジェクトのために制作されたゲームです。新宿の高田馬場の街並みを表現することを意図しています。",
+            "description": "レンダリングエンジンとしてPixi.jsを採用した「高田馬場ファイターズ」は、完全にブラウザ上で動作するJavaScriptで構築されています。アセットはファイルから読み込み、Pixi.jsがHTML5のキャンバス上にオブジェクトを配置します。HUDやポップアップなど、他のゲーム要素はHTMLとJavaScriptで描画されます。",
+            "timeline": "プロジェクトは3週間で開発され、さらに2週間の期間をかけて仕上げが行われました。"
+        },
+        "portfolio": {
+            "title": "ポートフォリオサイト",
+            "short": "私の個人ポートフォリオ。Next.jsで構築され、GSAP、Three.js、framer-motionを活用したコンポーネントで成り立っています。",
+            "description": "実は、他のことで忙しく、ポートフォリオサイトを作る必要性を感じなかったため、ずっと後回しにしていました。しかし、課題ということで仕上げた今は、自分でもとても誇りに思っています。",
+            "design": "デザインはmacOSのデスクトップから大いにインスパイアされ、まるでmacOSウィンドウ（例えば、左上の三色ボタンのあるウィンドウ）のように情報や詳細を表示します。もちろん、下部のドックもmacOSドックを彷彿とさせるものです。",
+            "secrets": "このポートフォリオにはいくつかの秘密が隠されています。すべて見つけ出せるでしょうか？"
+        },
+        "receptionist": {
+            "title": "Receptionist",
+            "short": "複数拠点間でのハードウェア配送とデバイス在庫を管理する社内プラットフォームです。",
+            "description": "Receptionistは、初期の配送追跡からデバイスのプロビジョニング、ユーザー割り当て、廃棄まで、デバイス管理のライフサイクル全体を効率化します。分散したハードウェア資産に対する可視性と制御を維持する必要がある組織向けに構築されました。",
+            "features": "Resendを使用した自動メール通知、プログラムでのアクセスのためのAPIキー管理、すべてのデバイス移動とステータス変更の包括的な監査証跡が含まれています。"
+        },
+        "bob": {
+            "title": "Bob",
+            "status": "作成中",
+            "short": "Rustで書かれた多用途なブロブオブジェクトマネージャーで、スタンドアロンクライアントと認証サーバーの両方として機能します。",
+            "description": "Bobは、ファイルやフォルダーからブロブオブジェクトを効率的に作成・管理し、ローカル操作と認証サーバーへのリモートアップロードの両方をサポートします。このシステムは柔軟性を重視して構築されており、既存のワークフローとシームレスに統合できます。",
+            "features": "Bobは現在、ローカルファイルシステム、AWS S3、Google Cloud Storage、Azure Blob Storage、Backblaze B2などの複数のストレージバックエンドをサポートしており、組織が好みのインフラストラクチャを選択できる自由を提供します。"
+        },
+        "jot": {
+            "title": "Jot",
+            "status": "作成中",
+            "short": "Windows Notepadにインスパイアされた、TauriとRustで構築されたミニマルなクロスプラットフォームのメモ帳アプリケーションです。",
+            "description": "Jotは不要な機能を削ぎ落とし、テキストエディタが本来あるべき姿を提供します：高速、軽量、そして集中を妨げない。Tauri v2とRustで構築され、ネイティブパフォーマンスを実現し、超ミニマルなインターフェースを維持しながら瞬時にファイル操作を処理します。",
+            "philosophy": "時には最もシンプルなツールが最良のツールです。書式設定もプラグインも肥大化もなく、ただあなたとテキストだけが存在します。"
+        },
+        "aer": {
+            "title": "Aer",
+            "status": "非公開",
+            "short": "デバイス間、エコシステム間でのP2Pファイル共有が魔法のように機能します。ケーブル不要、クラウド不要、摩擦なし。",
+            "description": "Aerは、オペレーティングシステムやメーカーに関係なく、同じローカルネットワーク上の任意のデバイス間で直接ピアツーピアのファイル転送を可能にします。リアルタイム接続のためにWebRTCを使用し、ネイティブTauriアプリケーションでラップされており、誰でも使えるAirDropのような機能を提供します。",
+            "technical": "アーキテクチャは、安全で直接的なデバイス間通信のためにWebRTCデータチャネルを活用します。ディスカバリーはローカルネットワーク上で自動的に行われ、転送は外部サーバーを経由せずに最速の接続パスを使用します。"
+        }
+    },
+    "links": {
+        "repository": "リポジトリ",
+        "website": "Website"
+    },
+    "encryptedFile": {
+        "title": "???",
+        "content": "This is a secret file."
+    },
+    "textEditor": {
+        "new": "新規",
+        "open": "開く",
+        "save": "保存",
+        "saveAs": "名前を付けて保存",
+        "saveAsPrompt": "ファイル名を入力してください:",
+        "unsavedChanges": "保存されていない変更があります。続けますか？",
+        "placeholder": "入力を開始するか、ファイルを開く...",
+        "lines": "行",
+        "characters": "文字"
+    },
+    "pixelGarden": {
+        "infoTitle": "ピクセルガーデンへようこそ",
+        "infoDescription": "16×16のピクセルアートの花を描いて、庭に植えましょう。ブラシツールで描き、消しゴムでピクセルを消すことができます。",
+        "createYourFlower": "花をつくる",
+        "submit": "花を植える",
+        "submitting": "植えています...",
+        "submitSuccess": "花が植えられました！",
+        "submitSuccessDescription": "あなたの花が庭に追加されました。",
+        "submitError": "花を植えることができませんでした",
+        "submitErrorDescription": "花の保存中に問題が発生しました。もう一度お試しください。",
+        "editor": "エディタ",
+        "gallery": "ギャラリー",
+        "loading": "花を読み込んでいます...",
+        "emptyGallery": "まだ花がありません",
+        "emptyGalleryDescription": "エディタタブで最初の花を作成しましょう。",
+        "fetchError": "花の読み込みに失敗しました",
+        "fetchErrorDescription": "保存された花を取得できませんでした。もう一度お試しください。",
+        "deleteSuccess": "花を削除しました",
+        "deleteSuccessDescription": "花が庭から削除されました。",
+        "deleteError": "花の削除に失敗しました",
+        "deleteErrorDescription": "花を削除できませんでした。もう一度お試しください。"
+    }
+}
