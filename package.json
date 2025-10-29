@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "db:generate": "drizzle-kit generate",
-    "db:push": "drizzle-kit push"
+    "db:push": "drizzle-kit push",
+    "vercel-build": "npm run db:push && npm run build"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.2",

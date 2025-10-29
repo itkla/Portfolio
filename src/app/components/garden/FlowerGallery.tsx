@@ -279,9 +279,10 @@ export const FlowerGallery = memo(function FlowerGallery({ refreshTrigger, onCan
     }, []);
 
     const handleContainerClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-        if (!onCanvasClick || !containerRef.current) return;
+        if (!onCanvasClick) return;
 
-        const rect = containerRef.current.getBoundingClientRect();
+        const target = e.currentTarget;
+        const rect = target.getBoundingClientRect();
         const clickX = e.clientX - rect.left;
         const clickY = e.clientY - rect.top;
 
@@ -324,8 +325,11 @@ export const FlowerGallery = memo(function FlowerGallery({ refreshTrigger, onCan
 
     if (flowers.length === 0) {
         return (
-            <div className="flex items-center justify-center h-full">
-                <div className="flex flex-col items-center gap-3 text-white/60 max-w-xs text-center">
+            <div 
+                className={`flex items-center justify-center h-full ${isPlanting ? 'cursor-crosshair' : ''}`}
+                onClick={handleContainerClick}
+            >
+                <div className="flex flex-col items-center gap-3 text-white/60 max-w-xs text-center pointer-events-none">
                     <Flower2 className="w-12 h-12 text-white/20" />
                     <p className="text-sm font-medium text-white/70">{t('pixelGarden.emptyGallery')}</p>
                     <p className="text-xs text-white/50">{t('pixelGarden.emptyGalleryDescription')}</p>
