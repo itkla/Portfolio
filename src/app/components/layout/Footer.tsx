@@ -79,7 +79,7 @@ export default function Footer({
         { icon: <FaGithub size={18} />, label: 'Github', onClick: () => { window.open('https://github.com/itkla', '_blank') }, className: '' },
         { icon: <FaInstagram size={18} />, label: 'Instagram', onClick: () => { window.open('https://instagram.com/hunternakagawa', '_blank') }, className: '' },
         { icon: <FaLine size={18} />, label: 'LINE', onClick: () => { window.open('https://line.me/ti/p/eEv6U32P63', '_blank') }, className: '' },
-        { icon: <FaEnvelope size={18} />, label: 'Mail', onClick: () => { window.location.href = 'mailto:hunternakagawa@icloud.com' }, className: '' },
+        { icon: <FaEnvelope size={18} />, label: 'Mail', onClick: () => { window.location.href = 'mailto:hello@klae.ooo' }, className: '' },
         { 
             icon: <FaTerminal size={18} />, 
             label: 'Terminal', 

@@ -127,7 +127,7 @@ export const AboutWindow = memo(function AboutWindow() {
                             <FaLine className="w-5 h-5" />
                         </a>
                         <a 
-                            href="mailto:hunternakagawa@icloud.com"
+                            href="mailto:hello@klae.ooo"
                             className="text-white/60 hover:text-white transition-colors duration-200"
                             aria-label="Email"
                         >
@@ -236,7 +236,7 @@ export const AboutWindow = memo(function AboutWindow() {
                             Let's make something great
                         </h2>
                         <a 
-                            href="mailto:hunternakagawa@icloud.com"
+                            href="mailto:hello@klae.ooo"
                             className="flex items-center justify-center gap-2 text-sm font-semibold px-6 py-3.5 text-white/90 bg-white/20 rounded-lg border border-white/20 backdrop-blur-sm hover:bg-white/30 hover:border-white/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 whitespace-nowrap shadow-lg"
                         >
                             <FaEnvelope className="w-4 h-4" />
