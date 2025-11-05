@@ -155,6 +155,40 @@ export const projects: Project[] = [
             ],
         },
     },
+    {
+        id: 'kadai05',
+        slug: 'project10',
+        titleKey: 'projects.kadai05.title',
+        category: 'frontend',
+        image: '/assets/kadai05.png',
+        websiteUrl: '/works/wd27/05/index.html',
+        tags: ['html5', 'tailwind', 'js', 'animejs', 'fontawesome'],
+        descriptionKeys: {
+            short: 'projects.kadai05.short',
+            paragraphs: [
+                'projects.kadai05.description',
+                'projects.kadai05.features',
+            ],
+        },
+        awardKey: 'projects.kadai05.award',
+        disclosureKey: 'projects.kadai05.disclosure',
+    },
+    {
+        id: 'kadai07',
+        slug: 'project11',
+        titleKey: 'projects.kadai07.title',
+        category: 'frontend',
+        image: '/assets/kada07.png',
+        websiteUrl: '/works/wd27/07/index.html',
+        tags: ['react', 'vite', 'html5', 'css', 'js'],
+        descriptionKeys: {
+            short: 'projects.kadai07.short',
+            paragraphs: [
+                'projects.kadai07.description',
+            ],
+        },
+        disclosureKey: 'projects.kadai07.disclosure',
+    },
 ];
 
 export const getProjectBySlug = (slug: string): Project | undefined => {

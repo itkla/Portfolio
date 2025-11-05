@@ -14,6 +14,8 @@ export const WINDOW_IDS = {
     PROJECT_7: 'project7',
     PROJECT_8: 'project8',
     PROJECT_9: 'project9',
+    PROJECT_10: 'project10',
+    PROJECT_11: 'project11',
     ENCRYPTED_FILE: 'encryptedFile',
     STEAM: 'steamWindow',
 } as const;

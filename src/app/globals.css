@@ -123,3 +123,30 @@ body {
     opacity: 0;
   }
 }
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-sparkle-1 {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-sparkle-2 {
+  animation: sparkle 2s ease-in-out 0.5s infinite;
+}
+
+.animate-sparkle-3 {
+  animation: sparkle 2s ease-in-out 1s infinite;
+}
+
+.animate-sparkle-4 {
+  animation: sparkle 2s ease-in-out 1.5s infinite;
+}

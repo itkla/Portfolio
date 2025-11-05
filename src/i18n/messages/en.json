@@ -106,6 +106,20 @@
             "short": "Cross-device, cross-ecosystem P2P file sharing that works like magic—no cables, no cloud, no friction.",
             "description": "Aer enables direct peer-to-peer file transfers between any devices on the same local network, regardless of operating system or manufacturer. Built with WebRTC for real-time connectivity and wrapped in a native Tauri application, it provides AirDrop-like functionality for everyone.",
             "technical": "The architecture leverages WebRTC data channels for secure, direct device-to-device communication. Discovery happens automatically on the local network, and transfers utilize the fastest available connection path without routing through external servers."
+        },
+        "kadai05": {
+            "title": "Tokyo Summer Events 2025",
+            "short": "A multi-page event listing website showcasing Tokyo's summer festivals and cultural events with interactive animations and modern design.",
+            "description": "Built as a school project, this website demonstrates advanced frontend techniques including scroll-triggered animations using Anime.js, dynamic search functionality, and responsive card layouts. The site features a clean, modern aesthetic with carefully crafted interactions and accessibility features.",
+            "features": "The project showcases various animation patterns including scroll-based reveals, ripple effects on hover, and smooth transitions. Built with vanilla JavaScript and Tailwind CSS, it emphasizes performance and user experience without relying on heavy frameworks.",
+            "award": "This project received an award for excellence in design and creativity.",
+            "disclosure": "Materials and images provided by HAL and sourced from the internet. All copyrights belong to their respective owners."
+        },
+        "kadai07": {
+            "title": "HAL Kindergarten",
+            "short": "A React-based kindergarten website built with Vite, featuring a clean and friendly interface designed for families.",
+            "description": "Built as a school project, this project demonstrates modern React development practices using Vite as the build tool. The site features a welcoming design with smooth animations and an intuitive layout tailored for parents exploring kindergarten options.",
+            "disclosure": "Materials and images provided by HAL and/or sourced from the internet. All copyrights belong to their respective owners."
         }
     },
     "links": {

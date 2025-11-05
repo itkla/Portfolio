@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浅草サンバカーニバル | 東京夏祭り 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "animejs": "https://cdn.jsdelivr.net/npm/animejs@4.1.3/+esm"
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/cee8ce18d4.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'noto': ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white font-noto" data-theme="pink">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold text-black">
+                    東京夏祭り 2025
+                </a>
+                <div class="flex items-center space-x-6">
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-600 hover:text-black transition-colors font-medium">
+                            イベント
+                            <i class="fas fa-chevron-down ml-2 text-sm transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-3">
+                                <a href="page01.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                                    <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mr-3">
+                                        <i class="fas fa-rocket text-red-500"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900">隅田川花火大会</div>
+                                        <div class="text-sm text-gray-500">7月26日</div>
+                                    </div>
+                                </a>
+                                <a href="page02.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mr-3">
+                                        <i class="fas fa-music text-blue-500"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900">サマーソニック東京</div>
+                                        <div class="text-sm text-gray-500">8月16-17日</div>
+                                    </div>
+                                </a>
+                                <div class="bg-pink-50 border-l-4 border-pink-500 mx-3 my-1">
+                                    <div class="flex items-center px-4 py-3">
+                                        <div class="w-10 h-10 bg-pink-100 rounded-xl flex items-center justify-center mr-3">
+                                            <i class="fas fa-bullhorn text-pink-500"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-medium text-gray-900">浅草サンバカーニバル</div>
+                                            <div class="text-sm text-pink-600">8月30日</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="page04.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                                    <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mr-3">
+                                        <i class="fas fa-torii-gate text-purple-500"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900">みなとみらいお盆</div>
+                                        <div class="text-sm text-gray-500">8月29-30日</div>
+                                    </div>
+                                </a>
+                                <a href="page05.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                                    <div class="w-10 h-10 bg-cyan-100 rounded-xl flex items-center justify-center mr-3">
+                                        <i class="fas fa-headphones text-cyan-500"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900">ULTRA JAPAN 2025</div>
+                                        <div class="text-sm text-gray-500">9月13-14日</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="relative mb-12">
+                <div class="h-96 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 rounded-3xl overflow-hidden shadow-2xl relative" style="background-image: url('images/samba/3.png'); background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 bg-black/40"></div>
+                    <div class="relative h-full flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h1 class="text-5xl font-bold mb-4 drop-shadow-lg">浅草サンバカーニバル</h1>
+                            <p class="text-xl opacity-90 drop-shadow-md">Asakusa Samba Carnival</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 left-8 bg-white px-6 py-3 rounded-2xl shadow-lg">
+                    <div class="flex items-center space-x-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-pink-500">8</div>
+                            <div class="text-sm text-gray-600">月</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-pink-500">30</div>
+                            <div class="text-sm text-gray-600">日</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm text-gray-600">13:00-18:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-6 lg:grid-cols-8 gap-6 mb-12">
+                <div class="md:col-span-4 lg:col-span-5 space-y-6">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-music text-pink-500 text-xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold text-gray-900">イベント概要</h2>
+                        </div>
+                        <div class="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                浅草サンバカーニバルは、1981年から続く日本最大級のサンバフェスティバルです。毎年8月末に浅草の雷門通りで開催され、本格的なブラジルサンバと江戸情緒が融合した世界でも珍しいカーニバルです。
+                            </p>
+                            <p>
+                                2025年は記念すべき第40回目の開催となり、さらに日本とブラジル国交樹立130周年記念の特別な年でもあります。情熱的なサンバのリズムに合わせて、色鮮やかな衣装を身にまったダンサーたちが雷門通りを練り歩きます。
+                            </p>
+                            <p>
+                                約50万人の観客が訪れるこのイベントは、浅草の夏の風物詩として定着しており、S1・S2リーグのコンテスト形式で本格的なサンバチームが競い合います。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-star text-pink-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">祭りの見どころ</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-start py-4 border-b border-gray-100">
+                                <i class="fas fa-drum text-pink-500 text-3xl mr-6 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">サンバパレードコンテスト</h4>
+                                    <p class="text-gray-600">本格的なブラジルサンバチームがS1・S2リーグで競い合います。色鮮やかなコスチュームと情熱的なダンスで浅草の街を彩ります。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start py-4 border-b border-gray-100">
+                                <i class="fas fa-users text-pink-500 text-3xl mr-6 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">コミュニティ参加</h4>
+                                    <p class="text-gray-600">コミュニケーションリーグでは地元の子供たちや企業チームが参加し、競技以外の楽しさも味わえます。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start py-4 border-b border-gray-100">
+                                <i class="fas fa-map text-pink-500 text-3xl mr-6 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">ブラジル物産展</h4>
+                                    <p class="text-gray-600">同時開催のブラジル物産展では、本場ブラジルの食品、雑貨、民芸品などを購入できます。浅草寺境内で開催されます。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start py-4">
+                                <i class="fas fa-camera text-pink-500 text-3xl mr-6 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">特別撮影スポット</h4>
+                                    <p class="text-gray-600">雷門を背景にしたサンバダンサーとの記念撮影スポットや、伝統的な江戸風景とのコントラストが楽しめます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-pink-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">パレードコンテストプログラム</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-pink-400 pl-4 bg-pink-50 p-4 rounded-r-xl">
+                                <h4 class="font-semibold text-pink-900 mb-2">8月30日（土）第40回記念大会</h4>
+                                <div class="space-y-1 text-pink-800 text-sm">
+                                    <p>13:00 会場開放・受付開始</p>
+                                    <p>13:30 S1リーグパレードコンテスト</p>
+                                    <p>14:30 S2リーグパレードコンテスト</p>
+                                    <p>15:30 コミュニケーションリーグ</p>
+                                    <p>16:30 テーマサンバリーグ</p>
+                                    <p>17:30 表彰式・フィナーレ</p>
+                                </div>
+                            </div>
+                            <div class="border-l-4 border-red-400 pl-4 bg-red-50 p-4 rounded-r-xl">
+                                <h4 class="font-semibold text-red-900 mb-2">ブラジル物産展同時開催</h4>
+                                <div class="space-y-1 text-red-800 text-sm">
+                                    <p>8月30日（土）31日（日）</p>
+                                    <p>10:00-17:00 浅草寺境内</p>
+                                    <p>本場ブラジルの食品・雑貨・民芸品</p>
+                                    <p>在日ブラジル商工会議所協力</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 lg:col-span-3 space-y-6">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-pink-100 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-info-circle text-pink-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">詳細情報</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-pink-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <div class="font-medium text-gray-900">開催期間</div>
+                                    <div class="text-gray-600">2025年8月30日（土）<br>13:00〜18:00</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-pink-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <div class="font-medium text-gray-900">会場</div>
+                                    <div class="text-gray-600">馬道通り〜雷門通り<br>浅草 馬道交差点付近</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-yen-sign text-pink-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <div class="font-medium text-gray-900">入場料</div>
+                                    <div class="text-gray-600">観覧無料<br>立ち見観覧となります</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-tshirt text-pink-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <div class="font-medium text-gray-900">服装</div>
+                                    <div class="text-gray-600">歩きやすい靴推奨<br>日焼け対策をお忘れなく</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-pink-100 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-eye text-pink-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">観覧情報</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="p-4 border-l-4 border-pink-500 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <div class="font-semibold text-black">観覧は立ち見です</div>
+                                <div class="text-gray-600 text-sm">コース内に柵を設置し、その内側から観覧いただきます</div>
+                            </div>
+                            <div class="p-4 border-l-4 border-pink-600 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <div class="font-semibold text-black">ライブ配信あり</div>
+                                <div class="text-gray-600 text-sm">J:COMチャンネル、公式YouTubeで生中継</div>
+                            </div>
+                            <div class="p-4 border-l-4 border-pink-700 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <div class="font-semibold text-black">交通規制注意</div>
+                                <div class="text-gray-600 text-sm">当日は主要道路で交通規制がかかります</div>
+                            </div>
+                            <div class="p-4 border-l-4 border-pink-800 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <div class="font-semibold text-black">早めの到着を</div>
+                                <div class="text-gray-600 text-sm">好位置での観覧は早めの到着がおすすめ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-pink-100 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-train text-pink-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">アクセス</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="p-3 border-l-4 border-pink-500 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <div class="font-medium text-black">東武スカイツリーライン</div>
+                                <div class="text-gray-600 text-sm">浅草駅 徒歩1分</div>
+                            </div>
+                            <div class="p-3 border-l-4 border-pink-600 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <div class="font-medium text-black">東京メトロ銀座線</div>
+                                <div class="text-gray-600 text-sm">浅草駅 徒歩1分</div>
+                            </div>
+                            <div class="p-3 border-l-4 border-pink-700 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <div class="font-medium text-black">都営浅草線</div>
+                                <div class="text-gray-600 text-sm">浅草駅 徒歩2分</div>
+                            </div>
+                            <div class="p-3 border-l-4 border-pink-800 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <div class="font-medium text-black">つくばエクスプレス</div>
+                                <div class="text-gray-600 text-sm">浅草駅 徒歩3分</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 border-l-4 border-pink-400 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                            <div class="text-black text-sm flex items-center">
+                                <i class="fas fa-car text-pink-400 mr-2"></i>
+                                駐車場はございません。公共交通機関をご利用ください
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-pink-100 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-shopping-cart text-pink-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">ブラジル物産展</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center p-3 border-l-4 border-pink-500 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <i class="fas fa-coffee text-pink-500 text-xl mr-3"></i>
+                                <div>
+                                    <div class="font-medium text-black">コーヒー・紅茶</div>
+                                    <div class="text-gray-600 text-sm">本場ブラジルの新鮮な豆</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-3 border-l-4 border-pink-600 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <i class="fas fa-cookie-bite text-pink-600 text-xl mr-3"></i>
+                                <div>
+                                    <div class="font-medium text-black">お菓子・スナック</div>
+                                    <div class="text-gray-600 text-sm">ブラジル伝統の甘いお菓子</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-3 border-l-4 border-pink-700 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <i class="fas fa-tshirt text-pink-700 text-xl mr-3"></i>
+                                <div>
+                                    <div class="font-medium text-black">雑貨・民芸品</div>
+                                    <div class="text-gray-600 text-sm">カラフルなブラジル雑貨</div>
+                                </div>
+                            </div>
+                            <div class="p-3 border-l-4 border-pink-400 bg-gradient-to-br from-pink-50 to-white rounded-lg">
+                                <div class="text-black text-sm flex items-center">
+                                    <i class="fas fa-info-circle text-pink-400 mr-2"></i>
+                                    8月30日・31日 10:00-17:00 浅草寺境内
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 text-center">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">他のイベントもチェック</h3>
+                    <p class="text-gray-600">東京の夏を彩る素晴らしいイベントが他にもたくさんあります</p>
+                </div>
+                <a href="index.html" class="inline-flex items-center px-8 py-4 bg-black text-white font-semibold rounded-2xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    イベント一覧に戻る
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white py-16 px-6 mt-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <h5 class="text-xl font-bold mb-4 text-white">
+                東京夏祭り 2025
+            </h5>
+            <p class="text-gray-400 mb-8">東京の夏を彩る最高のイベント情報をお届けします</p>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-400">&copy; 2025 東京夏祭り. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

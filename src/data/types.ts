@@ -13,6 +13,8 @@ export interface Project {
         short: string;
         paragraphs: string[];
     };
+    awardKey?: string; // i18n key for award callout
+    disclosureKey?: string; // i18n key for disclosure/copyright notice
 }
 
 export interface Skill {

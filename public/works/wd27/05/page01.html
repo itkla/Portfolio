@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隅田川花火大会 | 東京夏祭り 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "animejs": "https://cdn.jsdelivr.net/npm/animejs@4.1.3/+esm"
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/cee8ce18d4.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'noto': ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white font-noto" data-theme="red">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold text-black">
+                    東京夏祭り 2025
+                </a>
+                <div class="flex items-center space-x-6">
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-600 hover:text-black transition-colors font-medium">
+                            イベント
+                            <i class="fas fa-chevron-down ml-2 text-sm transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-3">
+                                <div class="bg-red-50 border-l-4 border-red-500 mx-3 my-1">
+                                    <div class="flex items-center px-4 py-3">
+                                        <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mr-3">
+                                            <i class="fas fa-rocket text-red-500"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-medium text-gray-900">隅田川花火大会</div>
+                                            <div class="text-sm text-red-600">7月26日</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="page02.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mr-3">
+                                        <i class="fas fa-music text-blue-500"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900">サマーソニック東京</div>
+                                        <div class="text-sm text-gray-500">8月16-17日</div>
+                                    </div>
+                                </a>
+                                <a href="page03.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                                    <div class="w-10 h-10 bg-pink-100 rounded-xl flex items-center justify-center mr-3">
+                                        <i class="fas fa-bullhorn text-pink-500"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900">浅草サンバカーニバル</div>
+                                        <div class="text-sm text-gray-500">8月30日</div>
+                                    </div>
+                                </a>
+                                <a href="page04.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                                    <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mr-3">
+                                        <i class="fas fa-torii-gate text-purple-500"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900">みなとみらいお盆</div>
+                                        <div class="text-sm text-gray-500">8月29-30日</div>
+                                    </div>
+                                </a>
+                                <a href="page05.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                                    <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center mr-3">
+                                        <i class="fas fa-headphones text-green-500"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900">ULTRA JAPAN 2025</div>
+                                        <div class="text-sm text-gray-500">9月13-14日</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="relative mb-12">
+                <div class="h-96 bg-gradient-to-br from-red-400 via-orange-500 to-yellow-400 rounded-3xl overflow-hidden shadow-2xl relative" style="background-image: url('images/sumida/01.jpg'); background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 bg-black/40"></div>
+                    <div class="relative h-full flex items-center justify-center z-10">
+                        <div class="text-center text-white">
+                            <h1 class="text-5xl font-bold mb-4 drop-shadow-lg">隅田川花火大会</h1>
+                            <p class="text-xl opacity-90 drop-shadow-md">Sumida River Fireworks Festival</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 left-8 bg-white px-6 py-3 rounded-2xl shadow-lg">
+                    <div class="flex items-center space-x-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-red-500">7</div>
+                            <div class="text-sm text-gray-600">月</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-red-500">26</div>
+                            <div class="text-sm text-gray-600">日</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm text-gray-600">19:00-20:30</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-6 lg:grid-cols-8 gap-6 mb-12">
+                <div class="md:col-span-4 lg:col-span-5 space-y-6">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-rocket text-red-500 text-xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold text-gray-900">イベント概要</h2>
+                        </div>
+                        <div class="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                隅田川花火大会は、江戸時代から続く日本最古の花火大会の一つです。毎年約100万人の観客が訪れ、東京の夏の風物詩として愛され続けています。
+                            </p>
+                            <p>
+                                2025年は第48回を迎え、約20,000発の花火が二つの会場から夜空を彩ります。第一会場（桜橋下流～言問橋上流）と第二会場（駒形橋下流～厕橋上流）の二エリアで同時開催されます。
+                            </p>
+                            <p>
+                                隅田川の両岸から打ち上げられる花火は、東京スカイツリーとのコラボレーションも見どころの一つ。写真撮影スポットとしても人気です。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-red-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">プログラム</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-16 text-center">
+                                    <div class="text-sm text-red-500 font-bold">19:00</div>
+                                </div>
+                                <div class="flex-1 ml-6">
+                                    <h4 class="font-semibold text-gray-900">開会式・安全祈願</h4>
+                                    <p class="text-gray-600 text-sm">伝統的な開会セレモニー</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-16 text-center">
+                                    <div class="text-sm text-red-500 font-bold">19:15</div>
+                                </div>
+                                <div class="flex-1 ml-6">
+                                    <h4 class="font-semibold text-gray-900">第一部 伝統花火</h4>
+                                    <p class="text-gray-600 text-sm">江戸時代から続く伝統的な花火の競演</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-16 text-center">
+                                    <div class="text-sm text-red-500 font-bold">20:00</div>
+                                </div>
+                                <div class="flex-1 ml-6">
+                                    <h4 class="font-semibold text-gray-900">第二部 創作花火</h4>
+                                    <p class="text-gray-600 text-sm">現代的な音楽と光のコラボレーション</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center py-4">
+                                <div class="w-16 text-center">
+                                    <div class="text-sm text-red-500 font-bold">20:25</div>
+                                </div>
+                                <div class="flex-1 ml-6">
+                                    <h4 class="font-semibold text-gray-900">グランドフィナーレ</h4>
+                                    <p class="text-gray-600 text-sm">圧巻の連続花火で締めくくり</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 lg:col-span-3 space-y-6">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-info-circle text-red-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">詳細情報</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-red-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <div class="font-medium text-gray-900">開催日時</div>
+                                    <div class="text-gray-600">2025年7月26日（土）<br>19:00〜20:30</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <div class="font-medium text-gray-900">会場</div>
+                                    <div class="text-gray-600">隅田川河川敷<br>（桜橋〜言問橋間）</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-yen-sign text-red-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <div class="font-medium text-gray-900">入場料</div>
+                                    <div class="text-gray-600">無料<br>（有料観覧席あり）</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-exclamation-triangle text-red-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <div class="font-medium text-gray-900">注意事項</div>
+                                    <div class="text-gray-600">雨天時は翌日に延期<br>混雑が予想されます</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-train text-red-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">アクセス</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="p-3 border-l-4 border-red-500 bg-gradient-to-br from-red-50 to-white rounded-lg">
+                                <div class="font-medium text-black">東武スカイツリーライン</div>
+                                <div class="text-gray-600 text-sm">とうきょうスカイツリー駅 徒歩5分</div>
+                            </div>
+                            <div class="p-3 border-l-4 border-red-600 bg-gradient-to-br from-red-50 to-white rounded-lg">
+                                <div class="font-medium text-black">東京メトロ銀座線</div>
+                                <div class="text-gray-600 text-sm">浅草駅 徒歩10分</div>
+                            </div>
+                            <div class="p-3 border-l-4 border-red-700 bg-gradient-to-br from-red-50 to-white rounded-lg">
+                                <div class="font-medium text-black">都営浅草線</div>
+                                <div class="text-gray-600 text-sm">本所吾妻橋駅 徒歩7分</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 border-l-4 border-red-400 bg-gradient-to-br from-red-50 to-white rounded-lg">
+                            <div class="text-black text-sm flex items-center">
+                                <i class="fas fa-exclamation-triangle text-red-400 mr-2"></i>
+                                当日は交通規制があります。公共交通機関をご利用ください。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-eye text-red-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">おすすめ観覧スポット</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center p-3 border-l-4 border-red-500 bg-gradient-to-br from-red-50 to-white rounded-lg">
+                                <i class="fas fa-star text-red-500 text-xl mr-3"></i>
+                                <div>
+                                    <div class="font-medium text-black">スカイツリータウン</div>
+                                    <div class="text-gray-600 text-sm">花火とスカイツリーのコラボ</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-3 border-l-4 border-red-600 bg-gradient-to-br from-red-50 to-white rounded-lg">
+                                <i class="fas fa-bridge text-red-600 text-xl mr-3"></i>
+                                <div>
+                                    <div class="font-medium text-black">桜橋</div>
+                                    <div class="text-gray-600 text-sm">川面に映る花火が美しい</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-3 border-l-4 border-red-700 bg-gradient-to-br from-red-50 to-white rounded-lg">
+                                <i class="fas fa-tree text-red-700 text-xl mr-3"></i>
+                                <div>
+                                    <div class="font-medium text-black">隅田公園</div>
+                                    <div class="text-gray-600 text-sm">ゆったりと楽しめる</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 text-center">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">他のイベントもチェック</h3>
+                    <p class="text-gray-600">東京の夏を彩る素晴らしいイベントが他にもたくさんあります</p>
+                </div>
+                <a href="index.html" class="inline-flex items-center px-8 py-4 bg-black text-white font-semibold rounded-2xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    イベント一覧に戻る
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white py-16 px-6 mt-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <h5 class="text-xl font-bold mb-4 text-white">
+                東京夏祭り 2025
+            </h5>
+            <p class="text-gray-400 mb-8">東京の夏を彩る最高のイベント情報をお届けします</p>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-400">&copy; 2025 東京夏祭り. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

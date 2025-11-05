@@ -180,6 +180,24 @@ export const WINDOW_REGISTRY: Record<WindowId, WindowConfig> = {
         render: () => <ProjectWindow projectSlug="project9" />,
     },
 
+    [WINDOW_IDS.PROJECT_10]: {
+        id: WINDOW_IDS.PROJECT_10,
+        titleKey: 'projects.kadai05.title',
+        icon: <FaFile size={18} />,
+        defaultSize: { width: 400, height: 300 },
+        defaultPosition: 'cascade',
+        render: () => <ProjectWindow projectSlug="project10" />,
+    },
+
+    [WINDOW_IDS.PROJECT_11]: {
+        id: WINDOW_IDS.PROJECT_11,
+        titleKey: 'projects.kadai07.title',
+        icon: <FaFile size={18} />,
+        defaultSize: { width: 400, height: 300 },
+        defaultPosition: 'cascade',
+        render: () => <ProjectWindow projectSlug="project11" />,
+    },
+
     [WINDOW_IDS.STEAM]: {
         id: WINDOW_IDS.STEAM,
         titleKey: 'windows.steam',
