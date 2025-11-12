@@ -44,7 +44,7 @@ export interface WindowRenderContext {
         setCommand: (cmd: string) => void;
         history: (string | React.ReactElement)[];
         executeCommand: (cmd: string) => void;
-        currentDir: string;
+        currentDir?: string;
     };
 }
 

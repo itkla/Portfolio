@@ -12,6 +12,7 @@ import { ViewToggleButton } from "@/app/components/ui/ViewToggleButton";
 import { useDesktop, WINDOW_IDS, WINDOW_REGISTRY } from '@/lib/window-manager';
 import { useTerminal } from '@/hooks/useTerminal';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
+import type { WindowId } from '@/constants/windows';
 import { Toaster } from '@/components/ui/toaster';
 import { DESKTOP_ICON_POSITIONS } from '@/constants/windows';
 
@@ -42,7 +43,7 @@ export default function Home() {
 
     const getOpenWindowsForShortcuts = useCallback(() => {
         return desktop.windowManager.getOpenWindows()
-            .map(w => ({ id: w.id, zIndex: w.zIndex }));
+            .map(w => ({ id: w.id as WindowId, zIndex: w.zIndex }));
     }, [desktop.windowManager.windows]);
 
     useKeyboardShortcuts({
