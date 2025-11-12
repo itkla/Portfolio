@@ -32,15 +32,6 @@ export default function Home() {
         setMounted(true);
     }, []);
 
-    useEffect(() => {
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        const isSmallScreen = window.innerWidth < 768;
-
-        if (isMobile || isSmallScreen) {
-            desktop.setViewMode('simplified');
-        }
-    }, [desktop.setViewMode]);
-
     const getOpenWindowsForShortcuts = useCallback(() => {
         return desktop.windowManager.getOpenWindows()
             .map(w => ({ id: w.id as WindowId, zIndex: w.zIndex }));
@@ -70,52 +61,58 @@ export default function Home() {
 
     return (
         <>
-            {desktop.viewMode === 'simplified' ? (
-                <>
-                    <SimplifiedView />
-                    <ViewToggleButton />
-                </>
-            ) : (
-                <div className="relative w-screen h-screen overflow-hidden">
-                    <ClickSpark
-                        sparkColor="#fff"
-                        sparkSize={10}
-                        sparkRadius={15}
-                        sparkCount={8}
-                        duration={400}
-                    />
+            <div className="block md:hidden">
+                <SimplifiedView />
+            </div>
 
-                    <div className="absolute" style={DESKTOP_ICON_POSITIONS.WORKS}>
-                        <DesktopIcon
-                            label={t('desktop.works')}
-                            iconSrc={<FaFolder className="w-8 h-8" />}
-                            onDoubleClick={() => desktop.windowManager.openWindow(WINDOW_IDS.WORKS)}
+            <div className="hidden md:block">
+                {desktop.viewMode === 'simplified' ? (
+                    <>
+                        <SimplifiedView />
+                        {mounted && <ViewToggleButton />}
+                    </>
+                ) : (
+                    <div className="relative w-screen h-screen overflow-hidden">
+                        <ClickSpark
+                            sparkColor="#fff"
+                            sparkSize={10}
+                            sparkRadius={15}
+                            sparkCount={8}
+                            duration={400}
                         />
-                    </div>
 
-                    <div className="absolute" style={DESKTOP_ICON_POSITIONS.ENCRYPTED_FILE}>
-                        <DesktopIcon
-                            label={t('desktop.secret')}
-                            iconSrc={<FaLock className="w-8 h-8" />}
-                            onDoubleClick={() => desktop.windowManager.openWindow(WINDOW_IDS.ENCRYPTED_FILE)}
+                        <div className="absolute" style={DESKTOP_ICON_POSITIONS.WORKS}>
+                            <DesktopIcon
+                                label={t('desktop.works')}
+                                iconSrc={<FaFolder className="w-8 h-8" />}
+                                onDoubleClick={() => desktop.windowManager.openWindow(WINDOW_IDS.WORKS)}
+                            />
+                        </div>
+
+                        <div className="absolute" style={DESKTOP_ICON_POSITIONS.ENCRYPTED_FILE}>
+                            <DesktopIcon
+                                label={t('desktop.secret')}
+                                iconSrc={<FaLock className="w-8 h-8" />}
+                                onDoubleClick={() => desktop.windowManager.openWindow(WINDOW_IDS.ENCRYPTED_FILE)}
+                            />
+                        </div>
+
+                        {mounted && desktop.renderWindows}
+
+                        <Footer
+                            onOpenProfile={() => desktop.windowManager.openWindow(WINDOW_IDS.PROFILE)}
+                            onOpenAbout={() => desktop.windowManager.openWindow(WINDOW_IDS.ABOUT)}
+                            onOpenTerminal={() => desktop.windowManager.openWindow(WINDOW_IDS.TERMINAL)}
+                            onOpenTextEditor={() => desktop.windowManager.openWindow(WINDOW_IDS.TEXT_EDITOR)}
+                            onOpenPixelGarden={() => desktop.windowManager.openWindow(WINDOW_IDS.PIXEL_GARDEN)}
+                            minimizedWindows={minimizedWindows}
+                            onRestoreWindow={(id) => desktop.windowManager.toggleMinimize(id)}
                         />
+
+                        {mounted && <ViewToggleButton />}
                     </div>
-
-                    {mounted && desktop.renderWindows}
-
-                    <Footer
-                        onOpenProfile={() => desktop.windowManager.openWindow(WINDOW_IDS.PROFILE)}
-                        onOpenAbout={() => desktop.windowManager.openWindow(WINDOW_IDS.ABOUT)}
-                        onOpenTerminal={() => desktop.windowManager.openWindow(WINDOW_IDS.TERMINAL)}
-                        onOpenTextEditor={() => desktop.windowManager.openWindow(WINDOW_IDS.TEXT_EDITOR)}
-                        onOpenPixelGarden={() => desktop.windowManager.openWindow(WINDOW_IDS.PIXEL_GARDEN)}
-                        minimizedWindows={minimizedWindows}
-                        onRestoreWindow={(id) => desktop.windowManager.toggleMinimize(id)}
-                    />
-
-                    <ViewToggleButton />
-                </div>
-            )}
+                )}
+            </div>
 
             <Toaster />
         </>
