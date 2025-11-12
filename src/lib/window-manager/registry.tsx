@@ -198,6 +198,24 @@ export const WINDOW_REGISTRY: Record<WindowId, WindowConfig> = {
         render: () => <ProjectWindow projectSlug="project11" />,
     },
 
+    [WINDOW_IDS.PROJECT_12]: {
+        id: WINDOW_IDS.PROJECT_12,
+        titleKey: 'projects.cafedeparis.title',
+        icon: <FaFile size={18} />,
+        defaultSize: { width: 400, height: 300 },
+        defaultPosition: 'cascade',
+        render: () => <ProjectWindow projectSlug="project12" />,
+    },
+
+    [WINDOW_IDS.PROJECT_14]: {
+        id: WINDOW_IDS.PROJECT_14,
+        titleKey: 'projects.journey.title',
+        icon: <FaFile size={18} />,
+        defaultSize: { width: 400, height: 300 },
+        defaultPosition: 'cascade',
+        render: () => <ProjectWindow projectSlug="project14" />,
+    },
+
     [WINDOW_IDS.STEAM]: {
         id: WINDOW_IDS.STEAM,
         titleKey: 'windows.steam',

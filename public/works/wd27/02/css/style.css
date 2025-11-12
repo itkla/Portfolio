@@ -471,7 +471,7 @@ body {
 }
 
 .landing-bg {
-    background-image: url('/img/main.jpeg');
+    background-image: url('../img/main.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

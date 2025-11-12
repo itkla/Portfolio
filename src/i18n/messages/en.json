@@ -57,8 +57,10 @@
         },
         "boulangerie": {
             "title": "HAL Boulangerie",
-            "short": "A clean, modern website built as a school assignment using only HTML, JavaScript, and Tailwind CSS due to project constraints.",
-            "description": "This project demonstrates my design philosophy: bold colors, generous whitespace, and minimal aesthetics working in harmony to create an elegant user experience."
+            "short": "A sophisticated French bakery website featuring multi-layered parallax scrolling effects, interactive image galleries, and dynamic content sections.",
+            "description": "This school project showcases advanced frontend techniques through a visually rich bakery website. The hero section implements a four-layer parallax effect where background elements move at different speeds, creating depth and visual interest. The menu section features an interactive product list where hovering over items displays corresponding images in a synchronized gallery, providing an intuitive browsing experience for bakery offerings.",
+            "technical": "The parallax implementation uses custom JavaScript to calculate scroll position and apply differential transform values to each layer, creating smooth depth perception without performance overhead. The menu interaction system dynamically updates a 10-image gallery grid based on hover events, with images transitioning using blur effects for a polished feel. The site also integrates Google Maps for location display and includes a news section with card-based layouts. Built with jQuery for DOM manipulation, Tailwind CSS for styling, and custom CSS for animations, the project demonstrates comprehensive understanding of modern web development patterns while maintaining my design philosophy of bold colors, generous whitespace, and minimal aesthetics.",
+            "disclosure": "Materials and images provided by HAL and sourced from the internet. All copyrights belong to their respective owners."
         },
         "concierge": {
             "title": "Concierge",
@@ -120,6 +122,19 @@
             "short": "A React-based kindergarten website built with Vite, featuring a clean and friendly interface designed for families.",
             "description": "Built as a school project, this project demonstrates modern React development practices using Vite as the build tool. The site features a welcoming design with smooth animations and an intuitive layout tailored for parents exploring kindergarten options.",
             "disclosure": "Materials and images provided by HAL and/or sourced from the internet. All copyrights belong to their respective owners."
+        },
+        "cafedeparis": {
+            "title": "Cafe de Paris",
+            "short": "An elegant split-screen cafe website showcasing French-inspired cuisine with smooth scroll interactions and an embedded Google Maps location.",
+            "description": "Built as a school assignment, this project demonstrates advanced CSS layout techniques using a split-screen design where the left side features a fixed image panel that changes based on scroll position, while the right side contains scrollable content sections. The navigation system uses page indicators that track scroll progress, creating a seamless browsing experience through the menu, about, and contact sections.",
+            "technical": "The site implements custom scroll-snap behavior for precise section alignment, dynamic image transitions synchronized with content scrolling, and a fully responsive Google Maps integration for location display. All interactions are built with vanilla JavaScript and CSS, demonstrating fundamental web development skills without relying on external animation libraries. The design emphasizes whitespace and typography to create a refined, upscale aesthetic matching the French cafe theme.",
+            "disclosure": "Materials and images provided by HAL and sourced from the internet. All copyrights belong to their respective owners."
+        },
+        "journey": {
+            "title": "Journey",
+            "short": "An immersive travel booking website featuring scroll-based storytelling, animated destination cards, and smooth transitions powered by Anime.js.",
+            "description": "Journey is a conceptual travel booking platform that transforms browsing destinations into an interactive storytelling experience. As users scroll through the site, they encounter full-screen sections for different Japanese cities, each with its own background image that smoothly transitions into view. A floating card interface dynamically updates its content, price, and styling to match the currently visible destination, creating a cohesive and engaging browsing flow.",
+            "technical": "The site leverages Anime.js for sophisticated entrance animations and smooth element transitions, creating polished fade-ins and slide effects throughout the interface. Scroll detection logic dynamically determines which section is in view and triggers corresponding updates to the floating card component, including title, location, description, tags, and pricing. The landing page features staggered animation delays that create a sequential reveal effect, while the navigation system includes a dropdown menu with smooth transitions. Background images are implemented with overlay gradients to ensure text readability, and the entire layout is fully responsive using Tailwind CSS utilities. Data is externalized into a separate JavaScript module, demonstrating clean code organization and maintainability practices."
         }
     },
     "links": {

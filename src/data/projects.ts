@@ -95,13 +95,16 @@ export const projects: Project[] = [
         category: 'frontend',
         image: '/assets/boulangerie.png',
         githubUrl: 'https://github.com/buhworld/HAL/tree/main/WD16/Boulangerie',
-        tags: ['html5', 'jquery', 'css', 'js', 'tailwind'],
+        websiteUrl: '/works/wd16/04/index.html',
+        tags: ['html5', 'jquery', 'css', 'js', 'tailwind', 'parallax'],
         descriptionKeys: {
             short: 'projects.boulangerie.short',
             paragraphs: [
                 'projects.boulangerie.description',
+                'projects.boulangerie.technical',
             ],
         },
+        disclosureKey: 'projects.boulangerie.disclosure',
     },
     {
         id: 'concierge',
@@ -188,6 +191,39 @@ export const projects: Project[] = [
             ],
         },
         disclosureKey: 'projects.kadai07.disclosure',
+    },
+    {
+        id: 'cafedeparis',
+        slug: 'project12',
+        titleKey: 'projects.cafedeparis.title',
+        category: 'frontend',
+        image: '/works/screenshots/wd16-03-cafe-de-paris.png',
+        websiteUrl: '/works/wd16/03/index.html',
+        tags: ['html5', 'css', 'js', 'google-maps'],
+        descriptionKeys: {
+            short: 'projects.cafedeparis.short',
+            paragraphs: [
+                'projects.cafedeparis.description',
+                'projects.cafedeparis.technical',
+            ],
+        },
+        disclosureKey: 'projects.cafedeparis.disclosure',
+    },
+    {
+        id: 'journey',
+        slug: 'project14',
+        titleKey: 'projects.journey.title',
+        category: 'frontend',
+        image: '/works/screenshots/wd27-02-journey.png',
+        websiteUrl: '/works/wd27/02/index.html',
+        tags: ['html5', 'css', 'js', 'jquery', 'tailwind', 'animejs'],
+        descriptionKeys: {
+            short: 'projects.journey.short',
+            paragraphs: [
+                'projects.journey.description',
+                'projects.journey.technical',
+            ],
+        },
     },
 ];
 
