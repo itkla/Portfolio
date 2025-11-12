@@ -12,6 +12,11 @@ export const SimplifiedView = memo(function SimplifiedView() {
                         <AboutWindow />
                     </div>
                 </div>
+                <div className="block md:hidden py-6 text-center">
+                    <p className="text-xs text-gray-400">
+                        💡 This site looks way better on a desktop or laptop ;)
+                    </p>
+                </div>
             </div>
         </div>
     );
