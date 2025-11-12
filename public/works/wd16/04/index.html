@@ -1,0 +1,449 @@
+<!-- @hunternakagawa PW11A124 Github: https://github.com/iktla -->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boulangerie HAL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "JetBrains Mono", monospace;
+            /* line-height: 0; */
+
+            background: linear-gradient(to bottom, #F8CAA5, #E8A859);
+            box-sizing: border-box;
+        }
+
+        .instrument-serif-regular {
+            font-family: "Instrument Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .instrument-serif-regular-italic {
+            font-family: "Instrument Serif", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .image-transition {
+            filter: blur(20px);
+            transition: filter 0.7s;
+        }
+
+        .image-transition.show {
+            filter: blur(0);
+        }
+
+        .page {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            /* position: relative; */
+            /* overflow: hidden; */
+
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #parallax-background {
+            .parallax-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            }
+            #layer1 {
+                z-index: -4;
+                filter: blur(1px);
+            }
+
+            #layer2 {
+                z-index: -3;
+                filter: blur(2px);
+            }
+
+            #layer3 {
+                z-index: -2;
+                filter: blur(3px);
+            }
+
+            #layer4 {
+                z-index: -1;
+                filter: blur(4px);
+            }
+        }
+        
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+    </script>
+</head>
+
+<body>
+    <div id="parallax-background">
+        <div id="layer1" class="parallax-layer">
+        </div>
+        <div id="layer2" class="parallax-layer">
+        </div>
+        <div id="layer3" class="parallax-layer">
+        </div>
+        <div id="layer4" class="parallax-layer">
+            </div>
+    </div>
+    <div class="container">
+        <div class="w-full fixed z-10">
+            <nav class="flex flex-row justify-between relative">
+                <div class="flex-1">
+                    <!-- Empty div to create space on the left side -->
+                </div>
+                <!-- intentional design to pop out *just* the tag -->
+                <div class="flex justify-center items-center flex-1">
+                    <div id="logo-tag" class="bg-white p-4 top-0 drop-shadow-xl transition-all transform-gpu -translate-y-full duration-500">
+                        <img src="img/logo.png" class="w-[75px] h-auto invert">
+                    </div>
+                </div>
+                <div class="flex space-x-4 flex-1 justify-end">
+                    <div class="p-4">
+                        <a href="#home" class="text-white hover:text-gray-300 transition-all">HOME</a>
+                        <a href="#menu" class="text-white hover:text-gray-300 transition-all scroll-link">MENU</a>
+                        <a href="#news" class="text-white hover:text-gray-300 transition-all scroll-link">NEWS</a>
+                        <a href="#about" class="text-white hover:text-gray-300 transition-all scroll-link">ABOUT</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="page flex flex-row snap-center" id="home">
+            <div class="site-title flex flex-col flex-1 justify-center content-center items-center relative" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <h1 id="main-title" class="instrument-serif-regular text-[10rem] text-white absolute">BOULANGERIE HAL</h1>
+                <img id="main-croissant" src="img/parallax_item/croissant.png" class="w-[25%] h-auto z-9 -mb-64">
+            </div>
+        </div>
+        <div class="page flex flex-row bg-white drop-shadow-lg snap-center" id="menu">
+            <div class="page-title flex-1 w-[15%]">
+                <img src="img/page_heading/MENU.svg">
+            </div>
+            <div class="flex-auto flex w-[70%]">
+                <div class="flex-1 w-[50%]">
+                    <div id="menu_images" class="flex flex-row flex-wrap w-full h-full overflow-hidden">
+                        <div id="image_carousel" class="flex flex-row w-full h-full">
+                            <!-- programmatically add images -->
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 w-[50%] flex flex-col justify-center items-center drop-shadow-2xl">
+                    <ul class="" id="menu_list">
+                        <!-- programmatically add items -->
+                    </ul>
+                    <span class="text-gray-300 hover:text-gray-500 transition-all">クリックすると関連画像が表示されます</span>
+                </div>
+            </div>
+            <div class="flex-1 w-[15%]">
+                
+            </div>
+        </div>
+        <div class="page flex flex-row snap-center" id="news">
+            <div class="page-title flex-1 w-[15%]">
+                <img src="img/page_heading/NEWS.svg">
+            </div>
+            <div class="page-content flex-auto w-[70%] flex justify-center items-center" id="news-cards">
+                <!-- programmatically add news cards -->
+            </div>
+            <div class="flex-1 w-[15%]">
+            </div>
+        </div>
+        <div class="page flex flex-row snap-center" id="about">
+            <div class="page-title flex-1 w-[15%]">
+                <img src="img/page_heading/ABOUT.svg">
+            </div>
+            <div class="page-content flex-auto w-[70%]">
+                <div class="flex flex-row content-end flex-wrap h-full">
+                    <div class="flex-1 w-[50%] h-[80%]">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1621.0908729024638!2d139.69964074330827!3d35.64789358540413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b45f5311ed1%3A0x12987f54caa1ee65!2z44CSMTUwLTAwMzMg5p2x5Lqs6YO95riL6LC35Yy654y_5qW955S677yS77yZ4oiS77yR77yY!5e0!3m2!1sja!2sjp!4v1433666443406" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+                    </div>
+                    <div class="flex flex-col justify-between  w-[50%]">
+                        <div class="flex-1 flex flex-col px-8">
+                            <div id="about-section-header" class="flex flex-row">
+                                <span class="text-5xl text-white">VISIT US</span>
+                                <ul class="flex flex-row space-x-4 justify-center items-center px-8">
+                                    <li class="list-none rounded-full w-[30px] hover:scale-110 hover:drop-shadow-sm transition-transform"><a href="#"><img src="img/social_icons/line.png" class="rounded-full"></a></li>
+                                    <li class="list-none rounded-full w-[30px] hover:scale-110 hover:drop-shadow-sm transition-transform"><a href="#"><img src="img/social_icons/facebook.png" class="rounded-full"></a></li>
+                                    <li class="list-none rounded-full w-[30px] hover:scale-110 hover:drop-shadow-sm transition-transform"><a href="#"><img src="img/social_icons/x.png" class="rounded-full"></a></li>
+                                    <li class="list-none rounded-full w-[30px] hover:scale-110 hover:drop-shadow-sm transition-transform"><a href="#"><img src="img/social_icons/instagram.png" class="rounded-full"></a></li>
+                                </ul>
+                            </div>
+                            <div id="about-section-text" class="py-8 text-white">
+                                <p>毎日オープン。毎朝パンを焼いてます。自分へのご褒美に美味しいものを食べてみてはいかがだろうかな〜〜〜</p>
+                            </div>
+                            <div class="flex flex-row text-white ">
+                                <div class="flex-1 flex flex-col w-[50%] pr-2">
+                                    <div class="flex-1 pb-4">
+                                        <h2 class="text-3xl">Address</h2>
+                                    </div>
+                                    <div class="flex-1 py-4">
+                                        <p>
+                                            Boulangerie HAL<br/>
+                                            東京都渋谷区猿楽町29-18
+                                        </p>
+                                    </div>
+                                    <div class="flex-1 py-4">
+                                        <p>
+                                            <a href="tel:03-3344-1010">03-3344-1010</a>
+                                        </p>
+                                    </div>
+                                    <div class="flex-1 py-4">
+                                        <ul class="text-xs">
+                                            <li>東急東横線［代官山駅］下車　徒歩3分</li>
+                                            <li>東急東横線・地下鉄日比谷線［中目黒駅］下車　徒歩7分</li>
+                                            <li>JR山手線・JR埼京線・地下鉄日比谷線［恵比寿駅］下車　徒歩10分</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flex-1 w-[50%] flex flex-col">
+                                    <div class="pb-4">
+                                        <h2 class="text-white text-3xl">Hours</h2>
+                                    </div>
+                                    <div class="flex-1 py-4">
+                                        <p>
+                                            <span class="">営業時間</span><br/>
+                                            10:00 - 20:00
+                                        </p>
+                                    </div>
+                                    <div class="flex-1 py-4">
+                                        <p>
+                                            <span class="">休憩日：なし</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="footer" class="px-8 text-white">
+                            <span class="text-xs">(C) 2022 Boulangerie HAL. All rights reserved.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 w-[15%]">
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    // rotate the croissant image on the main page as the user scrolls, and slightly move it up
+    var main_croissant = document.getElementById("main-croissant");
+    let main_title = document.getElementById("main-title");
+
+    // preload images so that there is no white flash when the user clicks on a menu item
+    var preloaded_images = [];
+    function preload_images() {
+        menu_items.forEach(item => {
+            var img = new Image();
+            img.src = item.image;
+            preloaded_images.push(img);
+        });
+    }
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        main_croissant.style.transform = `rotate(${scroll / 50}deg) translateY(${scroll / 20}px)`;
+        main_croissant.style.filter = `blur(${scroll / 100}px)`;
+        main_croissant.style.scale = 1 - (scroll / 3500);
+        main_croissant.style.opacity = 1 - (scroll / 1000);
+        main_title.style.opacity = 1 - (scroll / 1000);
+        main_title.style.transform = `translateY(${scroll / 5}px)`;
+        main_title.style.filter = `blur(${scroll / 100}px)`;
+        main_title.style.scale = 1 - (scroll / 5000);
+
+        // if the user is not 100% on the home page, show the #logo-tag by translating it down
+        if(scroll > 0) {
+            $('#logo-tag').removeClass('-translate-y-full').addClass('translate-y-0');
+        } else {
+            $('#logo-tag').removeClass('translate-y-0').addClass('-translate-y-full');
+        }
+
+        // if the user is on the menu page, invert the colors of the navbar text
+        if(scroll > $('#menu').offset().top && scroll < $('#news').offset().top) {
+            $('nav a').removeClass('text-white').addClass('text-black');
+        } else {
+            $('nav a').removeClass('text-black').addClass('text-white');
+        }
+    });
+
+    function add_items_to_menu() {
+        menu_items = [
+            { name: "Croissant", price: 350, image: "img/menu_items/croissant.jpg" },
+            { name: "Baguette", price: 300, image: "img/menu_items/baguette.jpg" },
+            { name: "Pain au chocolat", price: 400, image: "img/menu_items/pain-au-chocolat.jpg" },
+            { name: "Pain de campagne", price: 450, image: "img/menu_items/pain-de-campagne.jpg" },
+            { name: "Boule", price: 250, image: "img/menu_items/boule.jpg" },
+            { name: "Viennoiserie", price: 300, image: "img/menu_items/viennoiserie.jpg"},
+            { name: "Pains aux raisins", price: 200, image: "img/menu_items/pains-aux-raisins.jpg"},
+            { name: "Pain au levain", price: 250, image: "img/menu_items/pain-au-levain.jpg"},
+            { name: "Torsades", price: 200, image: "img/menu_items/torsades.jpg"},
+            { name: "Pain aux marrons", price: 350, image: "img/menu_items/pain-aux-marrons.jpg"}
+        ];
+
+        var menu_list = document.getElementById("menu_list");
+        // let menu_canvas = document.getElementById("menu_canvas");
+        let menu_images = document.getElementById("image_carousel");
+
+        menu_items.forEach(item => {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.innerHTML = `<span class="item-name cursor-pointer hover:underline">${item.name}</span>
+                   <span class="item-spacing">${'.'.repeat(Math.max(0, 40 - item.name.length - item.price.toString().length))}</span>
+                   <span class="item-price">¥${item.price}</span>`;
+            li.appendChild(a);
+
+            // add onclick event to the list item, so that when the user clicks on it, the image is displayed
+            li.onclick = function() {
+                var img = new Image();
+                img.src = item.image;
+                img.className = "w-full h-full object-cover image-transition";
+
+                img.onload = function() {
+                    if(img.classList.contains("show")) {
+                        img.classList.remove("show");
+                    } else {
+                        img.classList.add("show");
+                    }
+                };
+
+                menu_images.innerHTML = "";
+                menu_images.appendChild(img);
+            };
+
+            menu_list.appendChild(li);
+            
+            var img = new Image();
+            img.src = item.image;
+            img.className = "w-full h-full object-cover";
+            menu_images.appendChild(img);
+
+        });
+    };
+
+    function populate_news_cards() {
+        news_items = [
+            { title: "Introducing our new cheeses", date: "2022-11-30", subtext: "名産ブルーチーズ「フルム・ダンベール」を使ったパンや郷土料理をアレンジした惣菜パンなど、フェア限定商品をご用意しております。", image: "img/news/news_card1.jpg" },
+            { title: "A sweet and tangy new dessert", date: "2022-11-16", subtext: "ご好評いただいております、デザートに、季節限定でオレンジを使用したデザートが加わります。", image: "img/news/news_card3.jpg" },
+            { title: "Celebrating Auvergne flavors", date: "2022-11-08", subtext: "フランス　オーベルニュ地方の伝統パンや郷土料理の惣菜パンなどを販売するオーベルニュ地方フェアを開催いたします。", image: "img/news/news_card2.jpg" }
+        ];
+        news_items.forEach(item => {
+            var card_template = `
+            <div class="w-[300px] h-[500px] bg-gray-500 drop-shadow-xl m-4 relative hover:scale-105 hover:drop-shadow-2xl transition-transform " id="news_card_template">
+                    <img src="" class="w-full h-full object-cover absolute inset-0 z-0" id="news_card_image">
+                    <div class="flex flex-col h-full justify-between relative z-10 p-4 bg-black bg-opacity-50">
+                        <div class="flex-1" id="news_card_timestamp">
+                            <span class="text-lg text-white" id="news_card_timestamp_text"></span>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between" id="news_card_details">
+                            <div id="news_card_details_text" class="pt-16">
+                                <h2 class="text-2xl text-white" id="news_card_title"></h2>
+                                <p class="text-white text-sm" id="news_card_subtext"></p>
+                            </div>
+                            <div id="news_card_details_cta">
+                                <a href="#" class="text-xs text-white hover:text-gray-200">詳しく見る &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            var news_cards = document.getElementById("news-cards");
+            var card = document.createElement("div");
+            card.innerHTML = card_template;
+            card.id = "news_card";
+            card.querySelector("#news_card_image").src = item.image;
+            card.querySelector("#news_card_timestamp_text").innerHTML = item.date;
+            card.querySelector("#news_card_title").innerHTML = item.title;
+            card.querySelector("#news_card_subtext").innerHTML = item.subtext;
+            news_cards.appendChild(card);
+        });
+    }
+
+    // angle the news cards as the user hovers over them, angle towards the cursor
+    // do later)
+
+    $(document).ready(function() {
+        $('.scroll-link').on('click', function(e) {
+            e.preventDefault();
+            var target = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 800);
+        });
+        function createImage(layer, blurAmount, width, opacity) {
+            let imgs = ['img/parallax_item/baguette.png', 'img/parallax_item/bread.png', 'img/parallax_item/croissant.png', 'img/parallax_item/roundcroissant.png'];
+            let initialRotation = Math.random() * 360;
+            var img = $('<img />', {
+                src: imgs[Math.floor(Math.random() * imgs.length)],
+                class: 'parallax-image',
+                css: {
+                    position: 'absolute',
+                    top: Math.random() * 100 + '%',
+                    left: Math.random() * 100 + '%',
+                    width: Math.random() * width + 'px',
+                    height: 'auto',
+                    filter: `blur(${blurAmount}px)`,
+                    transform: `rotate(${initialRotation}deg)`,
+                    opacity: 1
+                },
+                'data-rotation': initialRotation
+            });
+            $(layer).append(img);
+        }
+
+        function populateLayers() {
+            for (var i = 0; i < 3; i++) { // Adjust the number of images ( i < n)
+                createImage('#layer1', 10, 100, 0.75);
+                createImage('#layer2', 8, 200, 0.50);
+                createImage('#layer3', 6, 300, 0.25);
+                createImage('#layer4', 4, 400, 0.1);
+            }
+        }
+
+        function parallaxEffect() {
+            var scrollTop = $(window).scrollTop();
+            $('#layer1').css('transform', 'translateY(' + scrollTop * 0.4 + 'px)');
+            $('#layer1').children().each(function() {
+                let initialRotation = $(this).data('rotation');
+                $(this).css('transform', 'rotate(' + (initialRotation + scrollTop * 0.4) + 'deg)');
+            });
+
+            $('#layer2').css('transform', 'translateY(' + scrollTop * 0.3 + 'px)');
+            $('#layer2').children().each(function() {
+                let initialRotation = $(this).data('rotation');
+                $(this).css('transform', 'rotate(' + (initialRotation + scrollTop * 0.3) + 'deg)');
+            });
+
+            $('#layer3').css('transform', 'translateY(' + scrollTop * 0.2 + 'px)');
+            $('#layer3').children().each(function() {
+                let initialRotation = $(this).data('rotation');
+                $(this).css('transform', 'rotate(' + (initialRotation + scrollTop * 0.2) + 'deg)');
+            });
+
+            $('#layer4').css('transform', 'translateY(' + scrollTop * 0.1 + 'px)');
+            $('#layer4').children().each(function() {
+                let initialRotation = $(this).data('rotation');
+                $(this).css('transform', 'rotate(' + (initialRotation + scrollTop * 0.1) + 'deg)');
+            });
+        }
+        populateLayers();
+        $(window).on('scroll', function() {
+            parallaxEffect();
+        });
+        add_items_to_menu();
+        populate_news_cards();
+    });
+</script>
+
+</html>

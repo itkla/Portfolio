@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe de Paris</title>
+    <style>
+        /* 失礼しますが、先生たちはCSS/JSを除外するために私のwebサイトを壊してしまう癖があるので、これらを一緒に併合しています。 ー　中川*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scrollbar-width: none;
+        }
+        .nav-overlay {
+            /* position: fixed; */
+            /* right: 0; */
+            width: 10%;
+            height: 10%;
+            z-index: 1000;
+            display: grid;
+            justify-content: right;
+            align-content: end;
+            .page-indicator {
+                position: absolute;
+                top: 50%;
+                right: 0.5rem;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                .page-indicator-bar {
+                    width: 0.25rem;
+                    height: 2rem;
+                    /* background: red; */
+                    border-radius: 25%;
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+                    filter: opacity(0.5);
+                }
+                .page-indicator-bar:hover {
+                    filter: opacity(1);
+                    transition: 0.2s ease-in-out;
+                }
+
+                .page-indicator-bar.active {
+                    filter: opacity(1);
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
+        .split-screen {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            height: 100vh;
+            .image-side {
+                flex: 1;
+                overflow: hidden;
+                /* background: lightcoral; */
+                position: relative;
+                .image-content {
+                    width: 50%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: fixed;
+                }
+                .image-panel {
+                    flex: 1;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                }         
+            }
+            .content-side {
+                flex: 1;
+                /* width: 50%; */
+                /* height: 100%; */
+                /* display: grid; */
+                /* flex-direction: column; */
+                overflow-y: scroll;
+                scroll-snap-type: y mandatory;
+                
+                justify-content: center;
+                align-items: center;
+                /* background-color: lightblue; */
+                scroll-behavior: smooth;
+                .content-container {
+                    max-width: 100%;
+                    max-height: 100%;
+                    height: 100%;
+                    /* display: grid; */
+                    scroll-snap-align: start;
+                    /* height: auto; */
+                    position: relative;
+                    justify-content: center;
+                    align-content: center;
+                    padding: 0 2rem;
+                    .subtext {
+                        /* font-size: 1.5rem; */
+                        /* color: #333; */
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+        .site-logo {
+            width: 50%;
+            height: auto;
+            /* margin-bottom: 1rem; */
+        }
+        .menu {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+            gap: 1rem;
+
+            /* overflow-y: hidden; */
+            .item {
+                max-width: 30%;
+                max-height: 100%;
+                /* border: 1px solid #333; */
+                border-radius: 1rem;
+                cursor: pointer;
+                /* padding: 1rem; */
+                display: grid;
+                /* grid-template-columns: 1fr; */
+                /* gap: 1rem; */
+
+                transform: scale(1);
+                transition: 0.2s ease-in-out;
+                .item-image {
+                    /* max-width: 50%; */
+                    width: 100%;
+                    height: 100%;
+                    aspect-ratio: 1/1;
+                    overflow: hidden;
+                    border-radius: 1rem 1rem 0 0;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 1rem 1rem 0 0;
+                    }
+                }
+                .item-details {
+                    height: 50%;
+                    padding: 1rem;
+                    /* padding: 1rem; */
+                    margin: 10% auto;
+                    justify-content: left;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .item-title {
+                        font-size: 1rem;
+                        /* color: #333; */
+                    }
+                    .item-description {
+                        font-size: 0.5rem;
+                        
+                        /* color: #333; */
+                    }
+                }
+            }
+            .item:hover {
+                transform: scale(1.05);
+                transition: 0.2s ease-in-out;
+            }
+        }
+        .france-blue {
+            background: #034EA2;
+            filter: drop-shadow(0 0 0.75rem #034da27a);
+            color: white;
+        }
+        .france-white {
+            background: white;
+            filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.2));
+            color: #034EA2;
+        }
+        .france-red {
+            background: #ED1C24;
+            filter: drop-shadow(0 0 0.75rem #ED1C247a);
+            color: white;
+        }
+
+        .about-container {
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            align-content: center;
+            .embedded-map {
+                width: 100%;
+                height: 40%;
+                border: none;
+                border-radius: 1rem;
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .panel-box {
+                display: flex;
+                flex-direction: row;
+                .info-panel {
+                    width: 33%;
+                    height: 100%;
+                    padding: 1rem;
+                    margin: 1rem;
+                    border-radius: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    /* align-content: center; */
+
+                    .info-panel-header {
+                        font-size: 1.5rem;
+                        /* color: #333; */
+                    }
+                    .info-panel-content {
+                        font-size: 0.75rem;
+                        ul {
+                            list-style-type: none;
+                            padding: 0;
+                        }
+                        a {
+                            text-decoration: underline;
+                            color: white;
+                        }
+                        /* color: #333; */
+                    }
+                    .info-panel-footer {
+                        font-size: 0.75rem;
+                        /* color: #333; */
+                        a {
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .social-icon {
+            border-radius: 50%;
+            width: 15%;
+            /* height: 5%; */
+            object-fit: cover;
+        }
+
+        .fadeIn {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .fadeOut {
+            animation: fadeOut 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            } to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            } to {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-overlay">
+            <div class="page-indicator">
+                <a href="#home" style="background: #034EA2;" class="page-indicator-bar active" id="indic-home"></a>
+                <a href="#menu" style="background: lightgray;" class="page-indicator-bar" id="indic-menu"></a>
+                <a href="#about" style="background: #ED1C24;" class="page-indicator-bar" id="indic-about"></a>
+            </div>
+        </div>
+        <div class="split-screen">
+            <div class="image-side">
+                <div class="image-panel">
+
+                </div>
+                <img class="image-content" id="image-left-content" src="img/panel2/croissant.jpg">
+            </div>
+            <div class="content-side">
+                <div class="content-container" id="home" onfocus="changeLeftImage(home)">
+                    <img class="site-logo" src="img/logo.png">
+                    <p class="subtext">ヨロッパーの喜びを楽しめる喫茶店</p>
+                </div>
+                <div class="content-container" id="menu" onfocus="changeLeftImage(menu)">
+                    <div class="menu">
+                        <div class="item france-blue" id="crepe" onclick="displayMenuItem(crepe)">
+                            <div class="item-image">
+                                <img class="" src="img/panel2/tangerine_crepe.jpg" />
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-title">Tangerine Crepe</h3>
+                                <p class="item-description">みかんとチーズ付け美味しいクレープ</p>
+                            </div>
+                        </div>
+                        <div class="item france-white" id="cake" onclick="displayMenuItem(cake)">
+                            <div class="item-image">
+                                <img class="" src="img/panel2/cake.jpg" />
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-title">Shortcake</h3>
+                                <p class="item-description">イチゴのショートケーキ</p>
+                            </div>
+                        </div>
+                        <div class="item france-red" id="gratin" onclick="displayMenuItem(gratin)">
+                            <div class="item-image">
+                                <img class="" src="img/panel2/gratin.jpg" />
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-title">Potato Gratin</h3>
+                                <p class="item-description">じゃがいもとチーズのグラタン</p>
+                            </div>
+                        </div>
+                        <div class="item france-blue" id="macaron" onclick="displayMenuItem(macaron)">
+                            <div class="item-image">
+                                <img class="" src="img/panel2/macaron.jpg" />
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-title">Macaron</h3>
+                                <span class="item-description">フランス産の名物</span>
+                            </div>
+                        </div>
+                        <div class="item france-white" id="spaghetti" onclick="displayMenuItem(spaghetti)">
+                            <div class="item-image">
+                                <img class="" src="img/panel2/aglio_e_olio.jpg" />
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-title">Aglio e Olio</h3>
+                                <p class="item-description">オリーブオイルとニンニクのパスタ</p>
+                            </div>
+                        </div>
+                        <div class="item france-red" id="scones" onclick="displayMenuItem(scones)">
+                            <div class="item-image">
+                                <img class="" src="img/panel2/scones.jpg" />
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-title">Scones</h3>
+                                <p class="item-description">イチゴジャムとクリームを添えたスコーン</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container" id="about" onfocus="changeLeftImage(about)">
+                    <div class="about-container">
+                        <iframe class="embedded-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.1308320782183!2d139.7011834696234!3d35.68873739828655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cda979f7b37%3A0x2b7a97a3093fbfb1!2sLe%20Cafe%20De%20Jo%C3%ABl%20Robuchon!5e0!3m2!1sen!2sjp!4v1732087120233!5m2!1sen!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="panel-box">
+                            <div class="info-panel france-blue">
+                                <h2 class="info-panel-header">Adresse</h2>
+                                <p class="info-panel-content">〒160-0022 東京都新宿区新宿４丁目１−６、JR 新宿ミライナタワー１F</p>
+                                <p class="info-panel-content">
+                                    ランチ: 11:00~14:30
+                                    <br />
+                                    ディナー: 16:00~22:00
+                                </p>
+                                <span class="info-panel-footer">定休日: なし</span>
+                            </div>
+                            <div class="info-panel france-white">
+                                <h2 class="info-panel-header">Accéder</h2>
+                                <span class="info-panel-content">
+                                    <ul>
+                                        <li>新宿駅南口から約5分歩行</li>
+                                        <li>新宿駅東南口から約8分歩行</li>
+                                    </ul>
+                                </span>
+                                <span class="info-panel-footer"></span>
+                            </div>
+                            <div class="france-red info-panel ">
+                                <h2 class="info-panel-header">Contact</h2>
+                                <p class="info-panel-content">
+                                    <a href="mailto:hello@klae.ooo">hello@cafedeparis.com</a>
+                                    <br />
+                                    <br />
+                                    <a href="tel:+81312345678">+81 3-1234-5678</a>
+                                </p>
+                                <span class="info-panel-footer">
+                                    <a href="https://www.instagram.com/hunternakagawa" target="_blank">
+                                        <img class="social-icon" src="img/socials/Instagram_logo_2022.svg.png" alt="Instagram">
+                                    </a>
+                                    <a href="https://www.x.com/" target="_blank">
+                                        <img class="social-icon" src="img/socials/1725374683twitter-x-logo.png" alt="Twitter">
+                                    </a>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <img class="social-icon" src="img/socials/Facebook_Logo_2023.png" alt="Facebook">
+                                    </a>
+                                    <a href="https://line.me" target="_blank">
+                                        <img class="social-icon" src="img/socials/LINE_logo.svg.png" alt="Line">
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    class User {
+        interacted = false;
+    }
+
+    // const userInteracted = false;
+
+    function displayMenuItem(id) {
+        var menuItemImage = id.querySelector(".item-image img").src;
+        changeImage(menuItemImage);
+        User.interacted = true;
+    }
+
+    function makeActive(id) {
+        var active = document.querySelector(".page-indicator-bar.active");
+        active.classList.remove("active");
+        id.classList.add("active");
+    }
+    
+    function changeScene(id) {
+        console.log("Changing Scene to " + id);
+        if (!User.interacted) {
+            switch (id) {
+                case 'home':
+                    document.getElementById("home").scrollIntoView({behavior: "smooth"});
+                    changeImage('img/panel1.jpg');
+                    break;
+                case 'menu':
+                    document.getElementById("menu").scrollIntoView({behavior: "smooth"});
+                    changeImage('img/panel1.jpg');
+                    
+                    break;
+                case 'about':
+                    document.getElementById("about").scrollIntoView({behavior: "smooth"});
+                    changeImage('img/panel3.jpg');
+                    break;
+            }
+        } else {
+            console.log("User has interacted with the menu; not changing scene");
+        }
+    }
+
+    function changeImage(path, timing = 490) {
+        let left_image = document.getElementById("image-left-content");
+        left_image.classList.add("fadeOut");
+        setTimeout(() => {
+            let image = new Image();
+            image.src = path;
+            image.onload = () => {
+                left_image.classList.remove("fadeOut");
+                left_image.src = image.src;
+                left_image.classList.add("fadeIn");
+            };
+        }, timing);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentUser = new User();
+        const sections = document.querySelectorAll('.content-container');
+        const leftImage = document.getElementById('image-left-content');
+        let currentSection = '';
+
+        let debounceTimer;
+        document.querySelector('.content-side').addEventListener('scroll', function() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                // leftImage.classList.add('fadeOut');
+                sections.forEach(section => {
+                    // console.log(section);
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        currentSection = section.id;
+                        // console.log(currentSection);
+                        makeActive(document.getElementById('indic-' + currentSection));
+                    }
+                });
+                if (!User.interacted) {
+                    switch (currentSection) {
+                        case 'home':
+                            changeImage('img/panel2/croissant.jpg');
+                            break;
+                        case 'menu':
+                            changeImage('img/panel1.jpg');
+                            // makeActive(document.getElementById('indic-menu'));
+                            break;
+                        case 'about':
+                            changeImage('img/panel3.jpg');
+                            // makeActive(document.getElementById('indic-about'));
+                            break;
+                    }
+                } else {
+                    console.log("User has interacted with the menu; not changing scene");
+                }
+            }, 100);
+        });
+    });
+
+</script>
+</html>
