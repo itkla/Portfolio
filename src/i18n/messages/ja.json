@@ -31,7 +31,14 @@
             "isi": "ISIランゲージスクール",
             "cgarts": "CG-Arts Webデザイナー ベーシック検定",
             "google": "Google Project Management Certificate",
+            "jlpt": "日本語能力試験 N2",
             "hal": "HAL東京"
+        },
+        "awardsTitle": "受賞歴",
+        "awards": {
+            "kadai05": "デザイン・創造性優秀賞 — 東京夏イベント2025",
+            "kadai10": "デザイン・創造性優秀賞 — グランメゾン ラベ",
+            "tokyosounds": "マイクロソフト賞 — Tokyo Sounds（未来創造展 2026）"
         }
     },
     "terminal": {

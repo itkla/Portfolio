@@ -9,7 +9,9 @@ import DecryptedText from "@/app/components/effects/DecryptedText/DecryptedText"
 import { TiltedWrapper } from "@/app/components/ui/TiltedWrapper";
 import { skills } from '@/data/skills';
 import { education } from '@/data/education';
+import { awards } from '@/data/awards';
 import { projects } from '@/data/projects';
+import { Trophy } from 'lucide-react';
 
 export const AboutWindow = memo(function AboutWindow() {
     const t = useTranslations();
@@ -82,9 +84,29 @@ export const AboutWindow = memo(function AboutWindow() {
                         ))}
                     </div>
                 </div>
+
+                <div className="space-y-3">
+                    <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider">
+                        {t('about.awardsTitle')}
+                    </h3>
+                    <div className="space-y-2">
+                        {awards.map((award, idx) => (
+                            <div
+                                key={idx}
+                                className="text-xs text-yellow-400/90 bg-yellow-500/10 rounded-lg p-2.5 border border-yellow-500/20 backdrop-blur-sm break-words"
+                            >
+                                <div className="flex items-center gap-1.5">
+                                    <Trophy className="w-3.5 h-3.5 text-yellow-500 shrink-0" />
+                                    <span className="font-semibold text-yellow-400/90">{award.year}</span>
+                                </div>
+                                <div className="text-yellow-400/70 mt-0.5">{t(award.titleKey)}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
