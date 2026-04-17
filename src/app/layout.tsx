@@ -23,7 +23,7 @@ export default async function RootLayout({
     const { locale } = await params;
 
     return (
-        <html lang={locale}>
+        <html lang={locale} className="dark">
             <body className={`${jetBrainsMono.variable} ${jetBrainsMono.variable} antialiased`}>
                 {children}
             </body>
