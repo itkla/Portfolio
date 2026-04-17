@@ -36,9 +36,18 @@
         },
         "awardsTitle": "受賞歴",
         "awards": {
-            "kadai05": "デザイン・創造性優秀賞 — 東京夏イベント2025",
-            "kadai10": "デザイン・創造性優秀賞 — グランメゾン ラベ",
-            "tokyosounds": "マイクロソフト賞 — Tokyo Sounds（未来創造展 2026）"
+            "kadai05": {
+                "award": "デザイン・創造性優秀賞",
+                "project": "東京夏イベント2025"
+            },
+            "kadai10": {
+                "award": "デザイン・創造性優秀賞",
+                "project": "グランメゾン ラベ"
+            },
+            "tokyosounds": {
+                "award": "マイクロソフト賞（未来創造展 2026）",
+                "project": "Tokyo Sounds"
+            }
         }
     },
     "terminal": {

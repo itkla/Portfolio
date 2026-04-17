@@ -12,9 +12,12 @@ import { education } from '@/data/education';
 import { awards } from '@/data/awards';
 import { projects } from '@/data/projects';
 import { Trophy } from 'lucide-react';
+import { useWindowManager } from '@/lib/window-manager';
+import type { WindowId } from '@/lib/window-manager/types';
 
 export const AboutWindow = memo(function AboutWindow() {
     const t = useTranslations();
+    const { openWindow } = useWindowManager();
 
     return (
         <div className="h-full overflow-y-auto @container">
@@ -85,25 +88,6 @@ export const AboutWindow = memo(function AboutWindow() {
                     </div>
                 </div>
 
-                <div className="space-y-3">
-                    <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider">
-                        {t('about.awardsTitle')}
-                    </h3>
-                    <div className="space-y-2">
-                        {awards.map((award, idx) => (
-                            <div
-                                key={idx}
-                                className="text-xs text-yellow-400/90 bg-yellow-500/10 rounded-lg p-2.5 border border-yellow-500/20 backdrop-blur-sm break-words"
-                            >
-                                <div className="flex items-center gap-1.5">
-                                    <Trophy className="w-3.5 h-3.5 text-yellow-500 shrink-0" />
-                                    <span className="font-semibold text-yellow-400/90">{award.year}</span>
-                                </div>
-                                <div className="text-yellow-400/70 mt-0.5">{t(award.titleKey)}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
             </motion.div>
 
             <motion.div
@@ -182,6 +166,27 @@ export const AboutWindow = memo(function AboutWindow() {
                         <p className="break-words">{t('about.whatIDo1')}</p>
                         <p className="break-words">{t('about.whatIDo2')}</p>
                         <p className="break-words">{t('about.whatIDo3')}</p>
+                    </div>
+                </div>
+
+                <div className="space-y-4">
+                    <h2 className="text-lg @md:text-xl font-semibold text-white/90 break-words">{t('about.awardsTitle')}</h2>
+                    <div className="grid grid-cols-1 @xl:grid-cols-3 gap-3">
+                        {awards.map((award, idx) => (
+                            <div
+                                key={idx}
+                                className="text-xs bg-yellow-500/10 rounded-xl p-3 border border-yellow-500/20 backdrop-blur-sm break-words cursor-pointer hover:bg-yellow-500/15 transition-colors duration-200"
+                                onClick={() => openWindow(award.slug as WindowId)}
+                            >
+                                <div className="flex items-center gap-1.5">
+                                    <Trophy className="w-3.5 h-3.5 text-yellow-500 shrink-0" />
+                                    <span className="font-semibold text-yellow-400/90">{award.year}</span>
+                                </div>
+                                <div className="text-yellow-400/70 mt-1">
+                                    {t(award.awardKey)} — <strong className="text-yellow-400/90">{t(award.projectNameKey)}</strong>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
 

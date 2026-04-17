@@ -36,9 +36,18 @@
         },
         "awardsTitle": "Awards",
         "awards": {
-            "kadai05": "Excellence in Design & Creativity — Tokyo Summer Events 2025",
-            "kadai10": "Excellence in Design & Creativity — Grande Maison La Baie",
-            "tokyosounds": "Microsoft IT Award — Tokyo Sounds (未来創造展 2026)"
+            "kadai05": {
+                "award": "Excellence in Design & Creativity",
+                "project": "Tokyo Summer Events 2025"
+            },
+            "kadai10": {
+                "award": "Excellence in Design & Creativity",
+                "project": "Grande Maison La Baie"
+            },
+            "tokyosounds": {
+                "award": "Microsoft IT Award (未来創造展 2026)",
+                "project": "Tokyo Sounds"
+            }
         }
     },
     "terminal": {
