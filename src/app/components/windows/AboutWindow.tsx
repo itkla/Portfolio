@@ -172,21 +172,30 @@ export const AboutWindow = memo(function AboutWindow() {
                 <div className="space-y-4">
                     <h2 className="text-lg @md:text-xl font-semibold text-white/90 break-words">{t('about.awardsTitle')}</h2>
                     <div className="grid grid-cols-1 @xl:grid-cols-3 gap-3">
-                        {awards.map((award, idx) => (
-                            <div
-                                key={idx}
-                                className="text-xs bg-yellow-500/10 rounded-xl p-3 border border-yellow-500/20 backdrop-blur-sm break-words cursor-pointer hover:bg-yellow-500/15 transition-colors duration-200"
-                                onClick={() => openWindow(award.slug as WindowId)}
-                            >
-                                <div className="flex items-center gap-1.5">
-                                    <Trophy className="w-3.5 h-3.5 text-yellow-500 shrink-0" />
-                                    <span className="font-semibold text-yellow-400/90">{award.year}</span>
+                        {awards.map((award, idx) => {
+                            const baseDelay = idx * 2;
+                            return (
+                                <div
+                                    key={idx}
+                                    className="text-xs bg-yellow-500/10 rounded-xl p-3 border border-yellow-500/20 backdrop-blur-sm break-words cursor-pointer hover:bg-yellow-500/15 transition-colors duration-200"
+                                    onClick={() => openWindow(award.slug as WindowId)}
+                                >
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="relative flex-shrink-0">
+                                            <Trophy className="w-4 h-4 text-yellow-500" />
+                                            <span className="absolute -top-1 -right-1 w-1 h-1 bg-yellow-400 rounded-full animate-sparkle" style={{ animationDelay: `${baseDelay}s` }} />
+                                            <span className="absolute top-0 -left-1 w-1 h-1 bg-amber-400 rounded-full animate-sparkle" style={{ animationDelay: `${baseDelay + 0.3}s` }} />
+                                            <span className="absolute -bottom-1 right-0 w-0.5 h-0.5 bg-yellow-300 rounded-full animate-sparkle" style={{ animationDelay: `${baseDelay + 0.6}s` }} />
+                                            <span className="absolute bottom-1 -left-1 w-0.5 h-0.5 bg-amber-300 rounded-full animate-sparkle" style={{ animationDelay: `${baseDelay + 0.9}s` }} />
+                                        </div>
+                                        <span className="font-semibold text-yellow-400/90">{award.year}</span>
+                                    </div>
+                                    <div className="text-yellow-400/70 mt-1">
+                                        {t(award.awardKey)} — <strong className="text-yellow-400/90">{t(award.projectNameKey)}</strong>
+                                    </div>
                                 </div>
-                                <div className="text-yellow-400/70 mt-1">
-                                    {t(award.awardKey)} — <strong className="text-yellow-400/90">{t(award.projectNameKey)}</strong>
-                                </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
 
