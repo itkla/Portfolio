@@ -44,7 +44,7 @@ export function WorksWindow({ onOpenProject }: WorksWindowProps) {
                     </span>
                 </div>
                 <div className="flex h-2 rounded-full overflow-hidden bg-white/5">
-                    {distribution.map((category, index) => (
+                    {distribution.map((category) => (
                         category.count > 0 && (
                             <div
                                 key={category.key}

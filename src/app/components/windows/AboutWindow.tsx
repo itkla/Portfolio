@@ -4,7 +4,7 @@ import { memo } from 'react';
 import { useTranslations } from 'next-intl';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaEnvelope, FaLine, FaInstagram, FaSteam } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaEnvelope, FaLine, FaInstagram } from 'react-icons/fa';
 import DecryptedText from "@/app/components/effects/DecryptedText/DecryptedText";
 import { TiltedWrapper } from "@/app/components/ui/TiltedWrapper";
 import { skills } from '@/data/skills';
@@ -269,7 +269,7 @@ export const AboutWindow = memo(function AboutWindow() {
                 <div className="space-y-4">
                     <div className="flex items-center justify-between gap-4">
                         <h2 className="text-lg @md:text-xl font-semibold text-white/90 break-words">
-                            Let's make something great
+                            Let&apos;s make something great
                         </h2>
                         <a 
                             href="mailto:hello@klae.ooo"

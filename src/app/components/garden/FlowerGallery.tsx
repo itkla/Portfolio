@@ -38,7 +38,7 @@ export const FlowerGallery = memo(function FlowerGallery({ refreshTrigger, onCan
     const [loadedFlowers, setLoadedFlowers] = useState<Set<number>>(new Set());
     const [myFlowerIds, setMyFlowerIds] = useState<Set<number>>(new Set());
     const [isTooltipHovered, setIsTooltipHovered] = useState(false);
-    const [userId, setUserId] = useState<string>('');
+    const [, setUserId] = useState<string>('');
     const [isPanning, setIsPanning] = useState(false);
     const [startPan, setStartPan] = useState({ x: 0, y: 0 });
     const [scrollOffset, setScrollOffset] = useState({ x: 0, y: 0 });
@@ -54,7 +54,7 @@ export const FlowerGallery = memo(function FlowerGallery({ refreshTrigger, onCan
                 const { zoom: savedZoom, offset } = JSON.parse(savedState);
                 setZoom(savedZoom || ZOOM_DEFAULT);
                 setScrollOffset(offset || { x: 0, y: 0 });
-            } catch (e) {
+            } catch {
                 //
             }
         }
@@ -70,7 +70,7 @@ export const FlowerGallery = memo(function FlowerGallery({ refreshTrigger, onCan
             try {
                 const flowerIds = JSON.parse(myFlowers);
                 setMyFlowerIds(new Set(flowerIds));
-            } catch (e) {
+            } catch {
                 //
             }
         }
