@@ -130,6 +130,20 @@
             "technical": "The site implements custom scroll-snap behavior for precise section alignment, dynamic image transitions synchronized with content scrolling, and a fully responsive Google Maps integration for location display. All interactions are built with vanilla JavaScript and CSS, demonstrating fundamental web development skills without relying on external animation libraries. The design emphasizes whitespace and typography to create a refined, upscale aesthetic matching the French cafe theme.",
             "disclosure": "Materials and images provided by HAL and sourced from the internet. All copyrights belong to their respective owners."
         },
+        "kadai10": {
+            "title": "Grande Maison La Baie",
+            "short": "A refined French restaurant website featuring elegant typography, smooth animations, and a sophisticated colonial-style design built with React and Vite.",
+            "description": "Built as a school project, this website presents a fictional upscale French restaurant in Yokohama Yamate. The site combines Japanese and French culinary aesthetics through refined typography using Cormorant Garamond and Noto Serif JP, creating a luxurious and welcoming atmosphere that reflects the restaurant's colonial fusion style.",
+            "award": "This project received an award for excellence in design and creativity.",
+            "disclosure": "Materials and images provided by HAL and sourced from the internet. All copyrights belong to their respective owners."
+        },
+        "tokyosounds": {
+            "title": "Tokyo Sounds",
+            "short": "A 3D interactive web app that lets users fly through Tokyo as a paper airplane while experiencing AI-generated soundscapes powered by Google Gemini Lyria.",
+            "description": "Tokyo Sounds combines photorealistic 3D city visualization using Google Maps 3D Tiles with real-time AI-generated music to create an immersive audio-visual journey through Tokyo. Users pilot a paper airplane over the city, discovering unique soundscapes that adapt to their location — from the brake sounds of trains to the voices of shopping streets.",
+            "technical": "Built with Next.js 16, React Three Fiber, and Three.js for the 3D flight experience, with Google Gemini Lyria handling real-time generative audio and Tone.js powering spatial sound. The app features multiplayer support, i18n localization, and an AI-powered repository chatbot built with Vercel AI SDK 5 and Gemini 2.5 Pro.",
+            "award": "This project received the Microsoft IT Award at the Future Creation Exhibition 2026 (未来創造展)."
+        },
         "journey": {
             "title": "Journey",
             "short": "An immersive travel booking website featuring scroll-based storytelling, animated destination cards, and smooth transitions powered by Anime.js.",

@@ -216,6 +216,24 @@ export const WINDOW_REGISTRY: Record<WindowId, WindowConfig> = {
         render: () => <ProjectWindow projectSlug="project14" />,
     },
 
+    [WINDOW_IDS.PROJECT_15]: {
+        id: WINDOW_IDS.PROJECT_15,
+        titleKey: 'projects.kadai10.title',
+        icon: <FaFile size={18} />,
+        defaultSize: { width: 400, height: 300 },
+        defaultPosition: 'cascade',
+        render: () => <ProjectWindow projectSlug="project15" />,
+    },
+
+    [WINDOW_IDS.PROJECT_16]: {
+        id: WINDOW_IDS.PROJECT_16,
+        titleKey: 'projects.tokyosounds.title',
+        icon: <FaFile size={18} />,
+        defaultSize: { width: 400, height: 300 },
+        defaultPosition: 'cascade',
+        render: () => <ProjectWindow projectSlug="project16" />,
+    },
+
     [WINDOW_IDS.STEAM]: {
         id: WINDOW_IDS.STEAM,
         titleKey: 'windows.steam',

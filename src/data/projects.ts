@@ -210,6 +210,41 @@ export const projects: Project[] = [
         disclosureKey: 'projects.cafedeparis.disclosure',
     },
     {
+        id: 'kadai10',
+        slug: 'project15',
+        titleKey: 'projects.kadai10.title',
+        category: 'frontend',
+        image: '/works/screenshots/wd27-10-grande-maison-la-baie.png',
+        websiteUrl: '/works/wd27/10/index.html',
+        tags: ['react', 'vite', 'html5', 'css', 'js'],
+        descriptionKeys: {
+            short: 'projects.kadai10.short',
+            paragraphs: [
+                'projects.kadai10.description',
+            ],
+        },
+        awardKey: 'projects.kadai10.award',
+        disclosureKey: 'projects.kadai10.disclosure',
+    },
+    {
+        id: 'tokyosounds',
+        slug: 'project16',
+        titleKey: 'projects.tokyosounds.title',
+        category: 'fullstack',
+        image: '/works/screenshots/tokyo-sounds.png',
+        githubUrl: 'https://github.com/tokyo-sounds/tokyo-sounds',
+        websiteUrl: 'https://tokyo-sounds.vercel.app',
+        tags: ['nextjs', 'typescript', 'threejs', 'r3f', 'google-maps', 'gemini', 'prisma', 'tailwind', 'tonejs'],
+        descriptionKeys: {
+            short: 'projects.tokyosounds.short',
+            paragraphs: [
+                'projects.tokyosounds.description',
+                'projects.tokyosounds.technical',
+            ],
+        },
+        awardKey: 'projects.tokyosounds.award',
+    },
+    {
         id: 'journey',
         slug: 'project14',
         titleKey: 'projects.journey.title',
